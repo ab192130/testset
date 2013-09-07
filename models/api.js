@@ -10,3 +10,9 @@ exports.loadModels = function ()
 
     return dbHashes;
 };
+
+exports.getUser = function(model, name, callback){
+    model.find({name: name}, function(err, data){
+        callback(err, data);
+    });
+};
