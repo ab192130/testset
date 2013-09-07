@@ -5,3 +5,7 @@ block content
     pre
      .userInfo= 'ID: ' + login
      .userInfo= 'Pass: ' + pass
+
+    - if (own)
+        .userPanel You are logged in
+        a#signOutBtn(href="#") Sign Out
