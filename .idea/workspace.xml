@@ -2,23 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94a9bd73-435f-4b48-8757-30121cab926a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/api.js" afterPath="$PROJECT_DIR$/models/api.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/user/index.jade" afterPath="$PROJECT_DIR$/views/user/index.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\Family\Burhan\Library\Documents\GitHub\testset\views\users\new.jade" afterPath="$PROJECT_DIR$/views/user/new.jade" />
     </list>
     <ignored path="testset.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378546813179" ignored="false" />
+    <file path="/Dummy.txt" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378549894084" ignored="false" />
     <file path="/README.md" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378546909735" ignored="false" />
     <file path="$PROJECT_DIR$/../git.proj01/README" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378540679238" ignored="false" />
     <file path="/README" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378540679238" ignored="false" />
     <file path="$PROJECT_DIR$/../git.proj01/index.html" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378540863765" ignored="false" />
     <file path="/api.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378549665622" ignored="false" />
-    <file path="/app.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378549837517" ignored="false" />
+    <file path="/app.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378550886956" ignored="false" />
     <file path="/new.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378549016239" ignored="false" />
     <file path="/index.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378549315095" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,7 +38,7 @@
       <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="19" selection-start="1006" selection-end="1006" vertical-scroll-proportion="0.5648464">
+            <state line="55" column="9" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.63822526">
               <folding />
             </state>
           </provider>
@@ -339,7 +334,11 @@
       <created>1378546817649</created>
       <updated>1378546817649</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added mongoose support and few optimizations for project db">
+      <created>1378549901531</created>
+      <updated>1378549901531</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -490,7 +489,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="19" selection-start="1006" selection-end="1006" vertical-scroll-proportion="0.5648464">
+        <state line="55" column="9" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.63822526">
           <folding />
         </state>
       </provider>

@@ -41,12 +41,22 @@ app.get('/', routes.index);
 app.get('/users', user.list);
 
 app.post('/user/new', function(req, res){
-    var newUser = new UserModel({name: req.body.login, pass: req.body.pass});
-    newUser.save(function(err){
-        if(err) throw err;
-        res.render('./user/new', {login: req.body.login, pass: req.body.pass});
-        console.log('%s:%s', req.body.login, req.body.pass);
+    UserModel.find({name: req.body.login}, function(err,data){
+        if(data[0]){
+            res.send('Sorry, username is busy');
+//            console.log(data[0]);
+        } else {
+            var newUser = new UserModel({name: req.body.login, pass: req.body.pass});
+            newUser.save(function(err){
+                if(err) throw err;
+//              res.render('./user/new', {login: req.body.login, pass: req.body.pass});
+                res.redirect('/user/' + req.body.login);
+                console.log('%s:%s', req.body.login, req.body.pass);
+            });
+        }
     });
+
+
 });
 
 app.post('/user/login', function(req, res){
@@ -55,9 +65,16 @@ app.post('/user/login', function(req, res){
 
 app.get('/user/:name', function(req, res){
     UserModel.find({name: req.params.name}, function(err,data){
-//        res.render('./user/index', {login: data.name, pass: data.pass});
-        console.log('%s:%s', data.name, data.pass);
-//        console.log('Requested User: ', data);
+        if (err) {throw err;} else {
+            if(data[0]){
+                res.render('./user/index', {login: data[0].name, pass: data[0].pass});
+                console.log('%s:%s', data[0].name, data[0].pass);
+      //        console.log('Requested User: ', data);
+            } else {
+                res.send('User Not Found!');
+            }
+        }
+
     });
 
 });
