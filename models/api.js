@@ -93,3 +93,9 @@
         });
     };
 
+    // SignOut User
+    exports.soutUser = function(req, res){
+        res.clearCookie('uid');
+        res.redirect('/');
+    };
+

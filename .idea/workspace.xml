@@ -4,21 +4,20 @@
     <list default="true" id="94a9bd73-435f-4b48-8757-30121cab926a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/api.js" afterPath="$PROJECT_DIR$/models/api.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/user/index.jade" afterPath="$PROJECT_DIR$/views/user/index.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="testset.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378564303283" ignored="false" />
+    <file path="/Dummy.txt" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378564338125" ignored="false" />
     <file path="/README.md" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378546909735" ignored="false" />
     <file path="$PROJECT_DIR$/../git.proj01/README" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378540679238" ignored="false" />
     <file path="/README" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378540679238" ignored="false" />
     <file path="$PROJECT_DIR$/../git.proj01/index.html" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378540863765" ignored="false" />
-    <file path="/api.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378563854198" ignored="false" />
-    <file path="/app.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378563216959" ignored="false" />
+    <file path="/api.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378564774398" ignored="false" />
+    <file path="/app.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378564725083" ignored="false" />
     <file path="/new.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378549016239" ignored="false" />
-    <file path="/index.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378564033932" ignored="false" />
+    <file path="/index.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378564802488" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,10 +37,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="25" selection-start="147" selection-end="147" vertical-scroll-proportion="0.33055556">
+            <state line="74" column="31" selection-start="2038" selection-end="2038" vertical-scroll-proportion="-12.36">
               <folding />
             </state>
           </provider>
@@ -50,16 +49,16 @@
       <file leaf-file-name="api.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="65" selection-start="2629" selection-end="2629" vertical-scroll-proportion="0.0">
+            <state line="98" column="26" selection-start="3295" selection-end="3295" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jade" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.jade" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/user/index.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="39" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
+            <state line="10" column="35" selection-start="206" selection-end="206" vertical-scroll-proportion="0.44155845">
               <folding />
             </state>
           </provider>
@@ -69,15 +68,6 @@
         <entry file="file://$PROJECT_DIR$/routes/user.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/user/new.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="13" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -115,9 +105,9 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/views/user/new.jade" />
         <option value="$PROJECT_DIR$/views/index.jade" />
+        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/models/api.js" />
         <option value="$PROJECT_DIR$/views/user/index.jade" />
-        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -363,7 +353,11 @@
       <created>1378556480617</created>
       <updated>1378556480617</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="+cookie sign in done&#10;+sign out button for own profile WIP">
+      <created>1378564342853</created>
+      <updated>1378564342853</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -521,20 +515,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/user/new.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/index.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="34" selection-start="460" selection-end="460" vertical-scroll-proportion="0.55119455">
@@ -542,23 +522,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/api.js">
+    <entry file="file://$PROJECT_DIR$/views/user/new.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="65" selection-start="2629" selection-end="2629" vertical-scroll-proportion="0.0">
+        <state line="5" column="24" selection-start="100" selection-end="100" vertical-scroll-proportion="0.22077923">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/user/index.jade">
+    <entry file="file://$PROJECT_DIR$/routes/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="39" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="25" selection-start="147" selection-end="147" vertical-scroll-proportion="0.33055556">
+        <state line="74" column="31" selection-start="2038" selection-end="2038" vertical-scroll-proportion="-12.36">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="26" selection-start="3295" selection-end="3295" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/user/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="35" selection-start="206" selection-end="206" vertical-scroll-proportion="0.44155845">
           <folding />
         </state>
       </provider>

@@ -66,7 +66,11 @@
     });
 
     app.get('/data', function(req, res){
-            UserModel.find({}, function(err,data){
-                res.json(data);
-            });
+        UserModel.find({}, function(err,data){
+            res.json(data);
+        });
+    });
+
+    app.get('/signout', function(req, res){
+        api.soutUser(req, res);
     });
