@@ -1,0 +1,12 @@
+extends ../layout
+block content
+    h1 New User
+    span Login: #{users[1].login}
+    br
+    span Pass: #{users[1].pass}
+
+    ul
+    - each user in users
+        li
+         = user.login + ' | ' + user.pass
+

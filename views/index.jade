@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1 Register
+  form#regForm(method="post" action="users/new")
+    label Login
+    input#loginInput(type="text", name="login")
+
+    label Password
+    input#passInput(type="text", name="pass")
+
+    input#submitBtn(type="submit" value="Sign Up")
+
+  h1 Sign In
+  form#logForm(method="post" action="user/login")
+    label Login
+    input#loginInput(type="text", name="login")
+
+    label Password
+    input#passInput(type="text", name="pass")
+
+    input#submitBtn(type="submit" value="Sign In")

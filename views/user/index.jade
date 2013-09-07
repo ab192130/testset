@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+    each user in userlist
+        if user.login == login
+            - var UserID = user.id
+            - var UserLogin = login
+            - var UserPass = user.pass
+             h1= UserLogin
+             pre
+              .userInfo= 'ID: ' + UserID
+              .userInfo= 'Pass: ' + UserPass
+
+         else
+            | User Not found
+
