@@ -49,7 +49,10 @@
 
     // User qeydiyyatdan kecir
     app.post('/user/new', function(req, res){
-        api.supUser(req, res, api, UserModel);
+        api.supUser(req, res, api, UserModel, function(uid){
+//            console.log(uid);
+            res.cookie('uid', uid); //kukiye yazag
+        });
     });
 
     // User sisteme daxil olur

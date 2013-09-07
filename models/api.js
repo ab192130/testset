@@ -22,7 +22,7 @@
 
 
     // SignUp User
-    exports.supUser = function(req, res, api, model){
+    exports.supUser = function(req, res, api, model, callback){
         // Eger xanalar bos deyilse
         if (req.body.login && req.body.pass){
             // Find user
@@ -35,6 +35,7 @@
                         var newUser = new model({name: req.body.login, pass: req.body.pass});
                         newUser.save(function(err){
                             if(err) throw err;
+                            callback(newUser._id);
                             res.redirect('/user/' + req.body.login);
                             console.log('New user signed up %s:%s', req.body.login, req.body.pass);
                         });
