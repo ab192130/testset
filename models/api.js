@@ -61,8 +61,6 @@
                             //Dogrudursa
                             callback(data[0]._id);
                             res.redirect('/user/' + req.body.login);
-
-
                         } else {
                             //Yanlisdirsa
                             res.send('Invalid Password');
