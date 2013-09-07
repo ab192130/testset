@@ -1,20 +1,13 @@
-exports.loadModels = function (mongoose)
+exports.loadModels = function ()
 {
-    var Schema = mongoose.schema;
 
-    var UserHash = {
-        id: {type: Number},
-        name:{type: String},
-        pass:{type: String}
+    var Schemas = {
+        UserSchema: {
+            id: {type: Number},
+            name:{type: String},
+            pass:{type: String}
+        }
     };
 
-    var schemas = {
-       UserSchema: new Schema(UserHash)
-    };
-
-    var models = {
-       UserModel: mongoose.model('Users', schemas.UserSchema)
-    };
-
-    return models;
+    return Schemas;
 };
