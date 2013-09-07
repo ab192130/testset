@@ -1,1 +1,2 @@
- test project readme
+sample login and register
+ TODO - posting and editing blogs

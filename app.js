@@ -10,6 +10,7 @@ var http = require('http');
 var path = require('path');
 var api = require('./models/api');
 var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
 var app = express();
 
@@ -29,22 +30,23 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-//DB
+//Database
 mongoose.connect('mongodb://localhost/proj01');
-var dbSchemas = api.loadModels(mongoose);
-var UserSchema = dbSchemas.UserSchema;
+
+var dbHashes = api.loadModels(mongoose);
+var UserSchema = new Schema(dbHashes.UserHash);
 var UserModel = mongoose.model('Users', UserSchema);
-
-
 
 app.get('/', routes.index);
 app.get('/users', user.list);
 
-app.post('/users/new', function(req, res){
-    Users.push({login: req.body.login, pass: req.body.pass});
-    res.render('./users/new', {users: Users});
-    console.log('%s:%s', req.body.login, req.body.pass);
-//    UserModel.save({id: '', name: req.body.login, pass: req.body.pass});
+app.post('/user/new', function(req, res){
+    var newUser = new UserModel({name: req.body.login, pass: req.body.pass});
+    newUser.save(function(err){
+        if(err) throw err;
+        res.render('./user/new', {login: req.body.login, pass: req.body.pass});
+        console.log('%s:%s', req.body.login, req.body.pass);
+    });
 });
 
 app.post('/user/login', function(req, res){
@@ -52,15 +54,18 @@ app.post('/user/login', function(req, res){
 });
 
 app.get('/user/:name', function(req, res){
-    res.render('./user/index', {userlist: Users, login: req.params.name});
+    UserModel.find({name: req.params.name}, function(err,data){
+//        res.render('./user/index', {login: data.name, pass: data.pass});
+        console.log('%s:%s', data.name, data.pass);
+//        console.log('Requested User: ', data);
+    });
+
 });
 
 app.get('/data', function(req, res){
-
-    UserModel.find({}, function(err, data){
-        res.send(data);
-    });
-
+        UserModel.find({}, function(err,data){
+            res.json(data);
+        });
 });
 
 http.createServer(app).listen(app.get('port'), function(){

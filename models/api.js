@@ -1,13 +1,12 @@
 exports.loadModels = function ()
 {
 
-    var Schemas = {
-        UserSchema: {
-            id: {type: Number},
+    var dbHashes = {
+        UserHash: {
             name:{type: String},
             pass:{type: String}
         }
     };
 
-    return Schemas;
+    return dbHashes;
 };
