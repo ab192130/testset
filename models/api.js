@@ -15,14 +15,14 @@
 
     // Db-den useri adina gore tap
     exports.getUser = function getUser(model, name, callback){
-        model.find({name: name}, function(err, data){
+        model.findOne({name: name}, function(err, data){
             callback(err, data);
         });
     };
 
     // Db-den useri ID-sine gore tap
     exports.getUserById = function getUser(model, id, callback){
-        model.find({_id: id}, function(err, data){
+        model.findOne({_id: id}, function(err, data){
             callback(err, data);
         });
     };
@@ -34,7 +34,7 @@
             // Find user
             api.getUser(model, req.body.login, function(err, data){
                 if (err) {throw err;} else {
-                    if(data[0]){
+                    if(data){
                         res.send('User already exists');
     //          console.log(data[0]);
                     } else {
@@ -58,14 +58,14 @@
         if (req.body.login && req.body.pass){
             api.getUser(model, req.body.login, function(err, data){
                 if (err) {throw err;} else {
-                    if (!data[0]) {
+                    if (!data) {
                         // Eger bele user movcud deyilse
                         res.send('User not found!');
                     } else {
                         //Eger bele user movcuddursa shifreni yoxlayirig
-                        if(req.body.pass == data[0].pass) {
+                        if(req.body.pass == data.pass) {
                             //Dogrudursa
-                            callback(data[0]._id);
+                            callback(data._id);
                             res.redirect('/user/' + req.body.login);
                         } else {
                             //Yanlisdirsa
@@ -83,15 +83,15 @@
     exports.openUser = function(req, res, api, model){
         api.getUser(model, req.params.name, function(err, data){
             if (err) {throw err;} else {
-                if(data[0]){
+                if(data){
                     var own = false;
-                    if(data[0]._id == req.cookies.uid)
+                    if(data._id == req.cookies.uid)
                     {
                         console.log('it is my profile');
                         own = true;
                     }
-                    res.render('./user/index', {login: data[0].name, pass: data[0].pass, own: own});
-                    console.log('%s:%s - %s', data[0].name, data[0].pass, data[0]._id);
+                    res.render('./user/index', {login: data.name, pass: data.pass, own: own});
+                    console.log('%s:%s - %s', data.name, data.pass, data._id);
                 } else {
                     res.send('User Not Found!');
                 }

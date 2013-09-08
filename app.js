@@ -83,15 +83,15 @@
         api.soutUser(req, res);
     });
 
-    // User melumetlarini deyisir
+    // User melumetlarini deyismek isteyir
     app.get('/user/:name/edit', function(req, res){
         var UserId = req.cookies.uid;
         var NameParam = req.params.name;
         api.getUserById(UserModel, UserId, function(err, user){
-            var User = user[0];
+            var User = user;
             var Username =  User.name;
             if(NameParam == Username){
-//                res.send('Editing profile of ' + Username);
+//              res.send('Editing profile of ' + Username);
                 res.render('./user/edit', {user: User});
             } else {
                 res.send('You haven\'t access to edit this user');
@@ -99,7 +99,15 @@
         });
     });
 
+    // User profilinde deyisikliyi tesdiqledi
     app.post('/user/:name/edit', function(req, res){
         var formData = req.body;
-        res.send(formData.username + ' - changes posted');
+        api.getUser(UserModel, req.params.name, function(err, user){
+            if (err) throw err;
+            user.name = formData.username;
+            user.save(function(err){
+                if (err) throw err;
+                res.send('saved!');
+            });
+        });
     });
