@@ -12,7 +12,7 @@
     var mongoose = require('mongoose');
     var Schema = mongoose.Schema;
 
-    var app = express();
+    var app = module.exports = express();
 
     // all environments
     app.set('port', process.env.PORT || 3000);
@@ -104,10 +104,12 @@
         var formData = req.body;
         api.getUser(UserModel, req.params.name, function(err, user){
             if (err) throw err;
-            user.name = formData.username;
+            var newUsername = formData.username;
+            user.name = newUsername;
             user.save(function(err){
                 if (err) throw err;
-                res.send('saved!');
+//                res.send('saved!');
+                api.gotoUser(res, newUsername);
             });
         });
     });

@@ -4,20 +4,20 @@
     <list default="true" id="94a9bd73-435f-4b48-8757-30121cab926a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/api.js" afterPath="$PROJECT_DIR$/models/api.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/user/edit.jade" afterPath="$PROJECT_DIR$/views/user/edit.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/user/index.jade" afterPath="$PROJECT_DIR$/views/user/index.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="testset.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378619619538" ignored="false" />
+    <file path="/Dummy.txt" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378621445209" ignored="false" />
     <file path="/README.md" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378546909735" ignored="false" />
     <file path="$PROJECT_DIR$/../git.proj01/README" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378540679238" ignored="false" />
     <file path="/README" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378540679238" ignored="false" />
     <file path="$PROJECT_DIR$/../git.proj01/index.html" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378540863765" ignored="false" />
-    <file path="/api.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378619949177" ignored="false" />
-    <file path="/app.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378621287457" ignored="false" />
+    <file path="/api.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378622509082" ignored="false" />
+    <file path="/app.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378622872723" ignored="false" />
     <file path="/new.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378549016239" ignored="false" />
-    <file path="/index.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378565745931" ignored="false" />
+    <file path="/index.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378622764147" ignored="false" />
     <file path="/edit.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378619308987" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,10 +38,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="12" selection-start="3281" selection-end="3281" vertical-scroll-proportion="0.7350649">
+            <state line="14" column="31" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="api.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/api.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="109" column="7" selection-start="3722" selection-end="3722" vertical-scroll-proportion="0.5277778">
               <folding />
             </state>
           </provider>
@@ -56,19 +65,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/api.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="36" selection-start="1261" selection-end="1265" vertical-scroll-proportion="-4.8">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/user/index.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="17" vertical-scroll-proportion="0.0">
+            <state line="12" column="30" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -123,11 +123,11 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/views/user/new.jade" />
-        <option value="$PROJECT_DIR$/views/user/index.jade" />
         <option value="$PROJECT_DIR$/views/index.jade" />
-        <option value="$PROJECT_DIR$/models/api.js" />
         <option value="$PROJECT_DIR$/views/user/edit.jade" />
+        <option value="$PROJECT_DIR$/views/user/index.jade" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/models/api.js" />
       </list>
     </option>
   </component>
@@ -433,7 +433,11 @@
       <created>1378619625028</created>
       <updated>1378619625028</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="+ edit profile function almost done - WIP">
+      <created>1378621449133</created>
+      <updated>1378621449133</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -465,7 +469,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15653495" sideWeight="0.67156863" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15653495" sideWeight="0.67156863" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -523,7 +527,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ bug with manual accessing to user/login solved&#10;+ edit profile page added -WIP" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ edit profile function almost done - WIP" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -548,6 +552,7 @@
     <MESSAGE value="+bug with sign up cookies were solved" />
     <MESSAGE value="+ little changes" />
     <MESSAGE value="+ bug with manual accessing to user/login solved&#10;+ edit profile page added -WIP" />
+    <MESSAGE value="+ edit profile function almost done - WIP" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -618,13 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/user/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="17" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/index.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="20" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0">
@@ -639,16 +637,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/api.js">
+    <entry file="file://$PROJECT_DIR$/views/user/index.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="36" selection-start="1261" selection-end="1265" vertical-scroll-proportion="-4.8">
+        <state line="12" column="30" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="12" selection-start="3281" selection-end="3281" vertical-scroll-proportion="0.7350649">
+        <state line="14" column="31" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="7" selection-start="3722" selection-end="3722" vertical-scroll-proportion="0.5277778">
           <folding />
         </state>
       </provider>

@@ -105,5 +105,9 @@
         res.redirect('/');
     };
 
+    exports.gotoUser = function(res, username){
+        res.redirect('/user/' + username);
+    };
+
 
 

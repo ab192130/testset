@@ -8,4 +8,8 @@ block content
 
     - if (own)
         .userPanel You are logged in
-        a#signOutBtn(href="/signout") Sign Out
+        ul
+         li
+            a.userBtn(href="./#{login}/edit") Edit Profile
+         li
+            a.userBtn#signOutBtn(href="/signout") Sign Out
