@@ -2,7 +2,6 @@
  * GET home page.
  */
 
-
 exports.index = function(req, res){
     var loggedIn = false;
     if (api.checkAuth(req.cookies)) loggedIn = true;

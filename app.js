@@ -6,12 +6,12 @@
     var express = require('express');
     var http = require('http');
     var path = require('path');
-//    var models = require('./models/');
-    api = module.exports = require('./models/api');
     var mongoose = require('mongoose');
     var Schema = mongoose.Schema;
 
+    api = module.exports = require('./models/api');
     app = module.exports = express();
+
 
     var routes = require('./routes');
     var user = require('./routes/user');
@@ -45,8 +45,8 @@
     UserModel = module.exports = mongoose.model('Users', UserSchema);
 
 
-
 //    app.use(app.router);
+
     app.get('/', routes.index);
 
     // User qeydiyyatdan kecir
@@ -58,6 +58,8 @@
     // /user/login ucun postsuz giris baglansin
     app.get('/user/login', user.login_get);
 
+    app.get('/user/me', user.me);
+
     // Userin sehifesi goruntulenir
     app.get('/user/:name', user.profile);
 
@@ -68,7 +70,9 @@
     app.get('/signout', user.signout);
 
     // User melumetlarini deyismek isteyir
-    app.get('/user/:name/edit', user.get_edit);
+    app.get('/user/:name/edit', user.edit_get);
 
     // User profilinde deyisikliyi tesdiqledi
-    app.post('/user/:name/edit', user.post_edit);
+    app.post('/user/:name/edit', user.edit_post);
+
+

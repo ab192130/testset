@@ -23,7 +23,14 @@ exports.profile = function(req, res){
     api.openUser(req, res, api, UserModel);
 };
 
-exports.get_edit = function(req, res){
+exports.me = function(req, res){
+    api.getUserById(UserModel, req.cookies.uid, function(err, data){
+        var username = data.name;
+        api.gotoUser(res, username);
+    });
+};
+
+exports.edit_get = function(req, res){
     var UserId = req.cookies.uid;
     var NameParam = req.params.name;
     api.getUserById(UserModel, UserId, function(err, user){
@@ -38,7 +45,7 @@ exports.get_edit = function(req, res){
     });
 };
 
-exports.post_edit = function(req, res){
+exports.edit_post = function(req, res){
     var formData = req.body;
     api.getUser(UserModel, req.params.name, function(err, user){
         if (err) throw err;

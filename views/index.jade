@@ -3,10 +3,14 @@ extends layout
 block content
   //Eger istifadeci sisteme daxil olmayibsa
   if auth
-    p user menu
-      p header
-      p content
-      p footer
+    p
+      ul
+       li
+        a(href="/user/me") Profile
+
+    p header
+    p content
+    p footer
   else
     h1 Register
     form#regForm(method="post" action="user/new")
