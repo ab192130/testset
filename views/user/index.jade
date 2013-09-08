@@ -7,9 +7,11 @@ block content
      .userInfo= 'Pass: ' + pass
 
     - if (own)
-        .userPanel You are logged in
-        ul
+        .userPanel You are logged in:
+        ul.user_menu_btns
          li
-            a.userBtn(href="./#{login}/edit") Edit Profile
+            a(href="/") Home
          li
-            a.userBtn#signOutBtn(href="/signout") Sign Out
+            a(href="./#{login}/edit") Edit Profile
+         li
+            a(href="/signout") Sign Out

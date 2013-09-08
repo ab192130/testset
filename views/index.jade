@@ -1,22 +1,25 @@
 extends layout
 
 block content
-  h1 Register
-  form#regForm(method="post" action="user/new")
-    label Username
-    input#loginInput(type="text", name="login")
+  //Eger istifadeci sisteme daxil olmayibsa
+  if auth
+    p user menu
+      p header
+      p content
+      p footer
+  else
+    h1 Register
+    form#regForm(method="post" action="user/new")
+      label Username
+      input#loginInput(type="text", name="login")
+      label Password
+      input#passInput(type="password", name="pass")
+      input#submitBtn(type="submit" value="Sign Up")
 
-    label Password
-    input#passInput(type="password", name="pass")
-
-    input#submitBtn(type="submit" value="Sign Up")
-
-  h1 Sign In
-  form#logForm(method="post" action="user/login")
-    label Username:
-    input#loginInput(type="text", name="login")
-
-    label Password:
-    input#passInput(type="password", name="pass")
-
-    input#submitBtn(type="submit" value="Sign In")
+    h1 Sign In
+    form#logForm(method="post" action="user/login")
+      label Username:
+      input#loginInput(type="text", name="login")
+      label Password:
+      input#passInput(type="password", name="pass")
+      input#submitBtn(type="submit" value="Sign In")

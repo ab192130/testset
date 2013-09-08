@@ -105,8 +105,14 @@
         res.redirect('/');
     };
 
+    // Userin profiline redirekt
     exports.gotoUser = function(res, username){
         res.redirect('/user/' + username);
+    };
+
+    // Yoxla gor user sistemdedi ya yox
+    exports.checkAuth = function(cookies){
+        return cookies.uid;
     };
 
 

@@ -4,15 +4,18 @@
      */
 
     var express = require('express');
-    var routes = require('./routes');
-    var user = require('./routes/user');
     var http = require('http');
     var path = require('path');
-    var api = require('./models/api');
+//    var models = require('./models/');
+    api = module.exports = require('./models/api');
     var mongoose = require('mongoose');
     var Schema = mongoose.Schema;
 
-    var app = module.exports = express();
+    app = module.exports = express();
+
+    var routes = require('./routes');
+    var user = require('./routes/user');
+
 
     // all environments
     app.set('port', process.env.PORT || 3000);
@@ -39,77 +42,33 @@
     mongoose.connect('mongodb://localhost/proj01');
     var dbHashes = api.loadModels(mongoose);
     var UserSchema = new Schema(dbHashes.UserHash);
-    var UserModel = mongoose.model('Users', UserSchema);
+    UserModel = module.exports = mongoose.model('Users', UserSchema);
 
 
 
 //    app.use(app.router);
     app.get('/', routes.index);
-    //app.get('/users', user.list);
 
     // User qeydiyyatdan kecir
-    app.post('/user/new', function(req, res){
-        api.supUser(req, res, api, UserModel, function(uid){
-            res.cookie('uid', uid); //kukiye yazag
-        });
-    });
+    app.post('/user/new', user.new);
 
     // User sisteme daxil olur
-    app.post('/user/login', function(req, res){
-        api.sinUser(req, res, api, UserModel, function(uid){
-            res.cookie('uid', uid); //kukiye yazag
-        });
-
-    });
+    app.post('/user/login', user.login_post);
 
     // /user/login ucun postsuz giris baglansin
-    app.get('/user/login', function(req, res){
-        res.redirect('/');
-    });
+    app.get('/user/login', user.login_get);
 
     // Userin sehifesi goruntulenir
-    app.get('/user/:name', function(req, res){
-        api.openUser(req, res, api, UserModel)
-    });
+    app.get('/user/:name', user.profile);
 
-    app.get('/data', function(req, res){
-        UserModel.find({}, function(err,data){
-            res.json(data);
-        });
-    });
+    // Userlerin melumat bazasina baxis
+    app.get('/data', routes.data);
 
     // User sistemden cixir
-    app.get('/signout', function(req, res){
-        api.soutUser(req, res);
-    });
+    app.get('/signout', user.signout);
 
     // User melumetlarini deyismek isteyir
-    app.get('/user/:name/edit', function(req, res){
-        var UserId = req.cookies.uid;
-        var NameParam = req.params.name;
-        api.getUserById(UserModel, UserId, function(err, user){
-            var User = user;
-            var Username =  User.name;
-            if(NameParam == Username){
-//              res.send('Editing profile of ' + Username);
-                res.render('./user/edit', {user: User});
-            } else {
-                res.send('You haven\'t access to edit this user');
-            }
-        });
-    });
+    app.get('/user/:name/edit', user.get_edit);
 
     // User profilinde deyisikliyi tesdiqledi
-    app.post('/user/:name/edit', function(req, res){
-        var formData = req.body;
-        api.getUser(UserModel, req.params.name, function(err, user){
-            if (err) throw err;
-            var newUsername = formData.username;
-            user.name = newUsername;
-            user.save(function(err){
-                if (err) throw err;
-//                res.send('saved!');
-                api.gotoUser(res, newUsername);
-            });
-        });
-    });
+    app.post('/user/:name/edit', user.post_edit);
