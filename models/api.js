@@ -66,7 +66,7 @@
                         if(req.body.pass == data.pass) {
                             //Dogrudursa
                             callback(data._id);
-                            res.redirect('/user/' + req.body.login);
+                            res.redirect('/user/me');
                         } else {
                             //Yanlisdirsa
                             res.send('Invalid Password');
@@ -87,7 +87,7 @@
                     var own = false;
                     if(data._id == req.cookies.uid)
                     {
-                        console.log('it is my profile');
+//                        console.log('it is my profile');
                         own = true;
                     }
                     res.render('./user/index', {login: data.name, pass: data.pass, own: own});
