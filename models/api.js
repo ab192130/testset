@@ -13,15 +13,21 @@
         return dbHashes;
     };
 
-    // Get User from DB
+    // Db-den useri adina gore tap
     exports.getUser = function getUser(model, name, callback){
         model.find({name: name}, function(err, data){
             callback(err, data);
         });
     };
 
+    // Db-den useri ID-sine gore tap
+    exports.getUserById = function getUser(model, id, callback){
+        model.find({_id: id}, function(err, data){
+            callback(err, data);
+        });
+    };
 
-    // SignUp User
+    // User qeydiyyatdan kecende
     exports.supUser = function(req, res, api, model, callback){
         // Eger xanalar bos deyilse
         if (req.body.login && req.body.pass){
@@ -47,7 +53,7 @@
         }
     };
 
-    // SignIn User
+    // User sisteme daxil olanda
     exports.sinUser = function(req, res, api, model, callback){
         if (req.body.login && req.body.pass){
             api.getUser(model, req.body.login, function(err, data){
@@ -73,6 +79,7 @@
         }
     };
 
+    // Userin profiline daxil olanda
     exports.openUser = function(req, res, api, model){
         api.getUser(model, req.params.name, function(err, data){
             if (err) {throw err;} else {
@@ -92,9 +99,11 @@
         });
     };
 
-    // SignOut User
+    // User sistemden cixir
     exports.soutUser = function(req, res){
         res.clearCookie('uid');
         res.redirect('/');
     };
+
+
 

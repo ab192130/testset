@@ -62,6 +62,11 @@
 
     });
 
+    // /user/login ucun postsuz giris baglansin
+    app.get('/user/login', function(req, res){
+        res.redirect('/');
+    });
+
     // Userin sehifesi goruntulenir
     app.get('/user/:name', function(req, res){
         api.openUser(req, res, api, UserModel)
@@ -73,6 +78,28 @@
         });
     });
 
+    // User sistemden cixir
     app.get('/signout', function(req, res){
         api.soutUser(req, res);
+    });
+
+    // User melumetlarini deyisir
+    app.get('/user/:name/edit', function(req, res){
+        var UserId = req.cookies.uid;
+        var NameParam = req.params.name;
+        api.getUserById(UserModel, UserId, function(err, user){
+            var User = user[0];
+            var Username =  User.name;
+            if(NameParam == Username){
+//                res.send('Editing profile of ' + Username);
+                res.render('./user/edit', {user: User});
+            } else {
+                res.send('You haven\'t access to edit this user');
+            }
+        });
+    });
+
+    app.post('/user/:name/edit', function(req, res){
+        var formData = req.body;
+        res.send(formData.username + ' - changes posted');
     });

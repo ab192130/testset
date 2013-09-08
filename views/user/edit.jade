@@ -1,0 +1,9 @@
+extends ../layout
+block content
+    h1= user.name
+    pre
+        form(method="post")
+            label.userInfo Username:
+             input(type="text", value="#{user.name}", name="username")
+             input(type="submit", value="Submit")
+
