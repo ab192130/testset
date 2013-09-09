@@ -100,7 +100,7 @@
 //                        console.log('it is my profile');
                         own = true;
                     }
-                    res.render('./user/index', {user: user, own: own});
+                    res.render('./user/index', {title: user.name + '\'s profile', user: user, own: own});
                     console.log('%s:%s - %s', user.name, user.pass, user._id);
                 } else {
                     res.send('User Not Found!');

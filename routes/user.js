@@ -44,7 +44,7 @@ exports.edit_get = function(req, res){
         var Username =  user.name;
         if(NameParam == Username){
 //          res.send('Editing profile of ' + Username);
-            res.render('./user/edit', {user: user});
+            res.render('./user/edit', {title:'Edit Profile', user: user});
         } else {
             res.send('You haven\'t access to edit this user');
         }
@@ -85,7 +85,7 @@ exports.changepassword_get = function(req, res){
         res.send('You are not logged in!');
     } else {
         api.getUserById(uid, function (err, user) {
-            res.render('./user/password', {user: user});
+            res.render('./user/password', {title:'Change Password', user: user});
         });
     }
 
