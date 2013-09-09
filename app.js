@@ -1,5 +1,3 @@
-// @TODO: Adding templates inside template
-
     /**
      * Module dependencies.
      */
