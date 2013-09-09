@@ -2,11 +2,8 @@ extends layout
 
 block content
   //Eger istifadeci sisteme daxil olmayibsa
-  if auth
-    p
-      ul
-       li
-        a(href="/user/me") Profile
+  if user
+    include .\partials\menu
 
     p header
     p content

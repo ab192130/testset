@@ -4,13 +4,13 @@
  */
 
 exports.new = function(req, res){
-    api.supUser(req, res, api, UserModel, function(uid){
+    api.supUser(req, res, api, function(uid){
         res.cookie('uid', uid); //kukiye yazag
     });
 };
 
 exports.login_post = function(req, res){
-    api.sinUser(req, res, api, UserModel, function(uid){
+    api.sinUser(req, res, api, function(uid){
         res.cookie('uid', uid); //kukiye yazag
     });
 };
@@ -20,12 +20,12 @@ exports.login_get = function(req, res){
 };
 
 exports.profile = function(req, res){
-    api.openUser(req, res, api, UserModel);
+    api.openUser(req, res);
 };
 
 exports.me = function(req, res){
-    api.getUserById(UserModel, req.cookies.uid, function(err, data){
-        var username = data.name;
+    api.getUserById(req.cookies.uid, function(err, user){
+        var username = user.name;
         api.gotoUser(res, username);
     });
 };
@@ -33,12 +33,12 @@ exports.me = function(req, res){
 exports.edit_get = function(req, res){
     var UserId = req.cookies.uid;
     var NameParam = req.params.name;
-    api.getUserById(UserModel, UserId, function(err, user){
-        var User = user;
-        var Username =  User.name;
+//    var User = api.getUserById(UserId);
+    api.getUserById(UserId, function(err, user){
+        var Username =  user.name;
         if(NameParam == Username){
-//              res.send('Editing profile of ' + Username);
-            res.render('./user/edit', {user: User});
+//          res.send('Editing profile of ' + Username);
+            res.render('./user/edit', {user: user});
         } else {
             res.send('You haven\'t access to edit this user');
         }
@@ -47,7 +47,7 @@ exports.edit_get = function(req, res){
 
 exports.edit_post = function(req, res){
     var formData = req.body;
-    api.getUser(UserModel, req.params.name, function(err, user){
+    api.getUser(req.params.name, function(err, user){
         if (err) throw err;
         var newUsername = formData.username;
         user.name = newUsername;

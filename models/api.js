@@ -14,25 +14,30 @@
     };
 
     // Db-den useri adina gore tap
-    exports.getUser = function getUser(model, name, callback){
+    exports.getUser = function (name, callback){
+        var model = UserModel;
         model.findOne({name: name}, function(err, data){
             callback(err, data);
         });
     };
 
     // Db-den useri ID-sine gore tap
-    exports.getUserById = function getUser(model, id, callback){
-        model.findOne({_id: id}, function(err, data){
+    exports.getUserById = function (id, callback){
+        var model = UserModel;
+        var user = model.findById(id, function(err,data){
+            if (err) throw err;
+            console.log(data);
             callback(err, data);
         });
     };
 
     // User qeydiyyatdan kecende
-    exports.supUser = function(req, res, api, model, callback){
+    exports.supUser = function(req, res, api, callback){
+        var model = UserModel;
         // Eger xanalar bos deyilse
         if (req.body.login && req.body.pass){
             // Find user
-            api.getUser(model, req.body.login, function(err, data){
+            api.getUser(req.body.login, function(err, data){
                 if (err) {throw err;} else {
                     if(data){
                         res.send('User already exists');
@@ -54,9 +59,9 @@
     };
 
     // User sisteme daxil olanda
-    exports.sinUser = function(req, res, api, model, callback){
+    exports.sinUser = function(req, res, api, callback){
         if (req.body.login && req.body.pass){
-            api.getUser(model, req.body.login, function(err, data){
+            api.getUser(req.body.login, function(err, data){
                 if (err) {throw err;} else {
                     if (!data) {
                         // Eger bele user movcud deyilse
@@ -66,7 +71,7 @@
                         if(req.body.pass == data.pass) {
                             //Dogrudursa
                             callback(data._id);
-                            res.redirect('/user/me');
+                            res.redirect('/user/' + req.body.login);
                         } else {
                             //Yanlisdirsa
                             res.send('Invalid Password');
@@ -80,18 +85,18 @@
     };
 
     // Userin profiline daxil olanda
-    exports.openUser = function(req, res, api, model){
-        api.getUser(model, req.params.name, function(err, data){
+    exports.openUser = function(req, res){
+        api.getUser(req.params.name, function(err, user){
             if (err) {throw err;} else {
-                if(data){
+                if(user){
                     var own = false;
-                    if(data._id == req.cookies.uid)
+                    if(user._id == req.cookies.uid)
                     {
 //                        console.log('it is my profile');
                         own = true;
                     }
-                    res.render('./user/index', {login: data.name, pass: data.pass, own: own});
-                    console.log('%s:%s - %s', data.name, data.pass, data._id);
+                    res.render('./user/index', {user: user, own: own});
+                    console.log('%s:%s - %s', user.name, user.pass, user._id);
                 } else {
                     res.send('User Not Found!');
                 }

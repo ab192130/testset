@@ -1,17 +1,10 @@
 extends ../layout
 
 block content
-    h1= login
+    h1= user.name
     pre
-     .userInfo= 'ID: ' + login
-     .userInfo= 'Pass: ' + pass
+     .userInfo= 'ID: ' + user.name
+     .userInfo= 'Pass: ' + user.pass
 
     - if (own)
-        .userPanel You are logged in:
-        ul.user_menu_btns
-         li
-            a(href="/") Home
-         li
-            a(href="./#{login}/edit") Edit Profile
-         li
-            a(href="/signout") Sign Out
+        include ..\partials\menu

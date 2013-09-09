@@ -3,9 +3,13 @@
  */
 
 exports.index = function(req, res){
-    var loggedIn = false;
-    if (api.checkAuth(req.cookies)) loggedIn = true;
-    res.render('index', {title: 'PROJ01', auth: loggedIn});
+    if (api.checkAuth(req.cookies)) {
+        api.getUserById(req.cookies.uid, function(err, user){
+            res.render('index', {title: 'PROJ01', user: user});
+        });
+    } else {
+        res.render('index', {title: 'PROJ01'});
+    }
 };
 
 exports.data = function(req, res){
