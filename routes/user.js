@@ -57,12 +57,23 @@ exports.edit_post = function(req, res){
 
     api.getUser(Params.name, function(err, user){
         if (err) throw err;
-        var newUsername = formData.username;
-        user.name = newUsername;
+        var formUsername = formData.username;
+        var formEmail = formData.email;
+        var oldUsername = user.name;
+        var oldEmail = user.email;
+
+        if (formUsername !== oldUsername){
+            user.name = formUsername;
+            var changed = true;
+        }
+
+        if (formEmail !== oldEmail){
+            user.email = formEmail;
+        }
         user.save(function(err){
             if (err) throw err;
 //                res.send('saved!');
-            api.gotoUser(res, newUsername);
+            api.gotoUser(res, changed ? formUsername : oldUsername);
         });
     });
 };

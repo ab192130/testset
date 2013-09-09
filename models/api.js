@@ -57,7 +57,7 @@
                 }
             });
         } else {
-            res.send('Login or password is empty');
+            res.send('All fields should be filled in!');
         }
     };
 
@@ -85,7 +85,7 @@
                 }
             });
         } else {
-            res.send('Login or password is empty');
+            res.send('Do not leave empty field!');
         }
     };
 

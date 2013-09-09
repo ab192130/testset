@@ -4,7 +4,11 @@ block content
     pre
         form(method="post")
             label.userInfo Username:
-             input(type="text", value="#{user.name}", name="username")
+             p
+                input(type="text", value="#{user.name}", name="username")
+            label.userInfo Email:
+             p
+                input(type="text", value="#{user.email}", name="email")
              input(type="submit", value="Submit")
         a(href="../#{user.name}/edit/password") Change Password
 
