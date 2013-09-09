@@ -6,7 +6,8 @@
         var dbHashes = {
             UserHash: {
                 name:{type: String},
-                pass:{type: String}
+                pass:{type: String},
+                email:{type: String}
             }
         };
 
@@ -36,21 +37,21 @@
         var model = UserModel;
         var username = req.body.username;
         var password = req.body.pass;
+        var email = req.body.email;
+
         // Eger xanalar bos deyilse
-        if (username && password){
+        if (username && password && email){
             // Find user
             api.getUser(username, function(err, data){
                 if (err) {throw err;} else {
                     if(data){
                         res.send('User already exists');
-    //          console.log(data[0]);
                     } else {
-                        var newUser = new model({name: username, pass: password});
+                        var newUser = new model({name: username, pass: password, email: email});
                         newUser.save(function(err){
                             if(err) throw err;
                             callback(newUser._id);
                             res.redirect('/user/me');
-                            console.log('New user signed up %s:%s', username, password);
                         });
                     }
                 }

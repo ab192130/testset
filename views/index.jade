@@ -10,17 +10,24 @@ block content
     p footer
   else
     h1 Register
-    form#regForm(method="post" action="user/new")
-      label Username
-      input#loginInput(type="text", name="username")
-      label Password
-      input#passInput(type="password", name="pass")
-      input#submitBtn(type="submit" value="Sign Up")
+    form(method="post" action="user/new")
+      p
+        label Username
+        input(type="text", name="username")
+      p
+        label Password
+        input(type="password", name="pass")
+      p
+        label Email
+        input(type="text", name="email")
+      input(type="submit" value="Sign Up")
 
     h1 Sign In
     form#logForm(method="post" action="user/login")
-      label Username:
-      input#loginInput(type="text", name="username")
-      label Password:
-      input#passInput(type="password", name="pass")
+      p
+        label Username:
+        input#loginInput(type="text", name="username")
+      p
+        label Password:
+        input#passInput(type="password", name="pass")
       input#submitBtn(type="submit" value="Sign In")

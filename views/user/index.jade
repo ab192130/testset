@@ -3,8 +3,10 @@ extends ../layout
 block content
     h1= user.name
     pre
-     .userInfo= 'ID: ' + user.name
+     .userInfo= 'ID: ' + user._id
      .userInfo= 'Pass: ' + user.pass
+     - if (user.email)
+       .userInfo= 'Email: ' + user.email
 
     - if (own)
         include ..\partials\menu

@@ -25,6 +25,7 @@ exports.profile = function(req, res){
 
 exports.me = function(req, res){
     var uid = req.cookies.uid;
+
     if (!uid){
         api.gotoHome(res);
     } else {
@@ -38,7 +39,7 @@ exports.me = function(req, res){
 exports.edit_get = function(req, res){
     var UserId = req.cookies.uid;
     var NameParam = req.params.name;
-//    var User = api.getUserById(UserId);
+
     api.getUserById(UserId, function(err, user){
         var Username =  user.name;
         if(NameParam == Username){
@@ -53,6 +54,7 @@ exports.edit_get = function(req, res){
 exports.edit_post = function(req, res){
     var formData = req.body;
     var Params = req.params;
+
     api.getUser(Params.name, function(err, user){
         if (err) throw err;
         var newUsername = formData.username;
@@ -70,12 +72,14 @@ exports.changepassword_get = function(req, res){
 };
 
 exports.changepassword_post = function(req, res){
+
     var uid = req.cookies.uid;
     var formData = req.body;
     var CurrentPass = formData.currentpass;
     var NewPass = formData.newpass;
     var ConfirmPass = formData.confirmpass;
-    api.getUserById(req.cookies.uid, function(err, user){
+
+    api.getUserById(uid, function(err, user){
         if (err) throw err;
         var password = user.pass;
         if (CurrentPass == password){

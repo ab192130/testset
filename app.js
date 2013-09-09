@@ -1,3 +1,4 @@
+
     /**
      * Module dependencies.
      */
@@ -11,10 +12,8 @@
     api = module.exports = require('./models/api');
     app = module.exports = express();
 
-
     var routes = require('./routes');
     var user = require('./routes/user');
-
 
     // all environments
     app.set('port', process.env.PORT || 3000);
