@@ -79,7 +79,16 @@ exports.edit_post = function(req, res){
 };
 
 exports.changepassword_get = function(req, res){
-    res.render('./user/password');
+    var uid = req.cookies.uid;
+    console.log(uid);
+    if (!uid) {
+        res.send('You are not logged in!');
+    } else {
+        api.getUserById(uid, function (err, user) {
+            res.render('./user/password', {user: user});
+        });
+    }
+
 };
 
 exports.changepassword_post = function(req, res){
