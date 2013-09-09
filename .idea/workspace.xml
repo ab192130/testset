@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94a9bd73-435f-4b48-8757-30121cab926a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/user/edit.jade" afterPath="$PROJECT_DIR$/views/user/edit.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.jade" afterPath="$PROJECT_DIR$/views/layout.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/user/password.jade" afterPath="$PROJECT_DIR$/views/user/password.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/user.js" afterPath="$PROJECT_DIR$/routes/user.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="testset.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378737137846" ignored="false" />
+    <file path="/Dummy.txt" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378739440350" ignored="false" />
     <file path="/README.md" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378546909735" ignored="false" />
     <file path="$PROJECT_DIR$/../git.proj01/README" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378540679238" ignored="false" />
     <file path="/README" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378540679238" ignored="false" />
@@ -21,7 +18,7 @@
     <file path="/index.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378737067084" ignored="false" />
     <file path="/edit.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378737223206" ignored="false" />
     <file path="/index.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378712080422" ignored="false" />
-    <file path="/user.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378738859492" ignored="false" />
+    <file path="/user.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378739576643" ignored="false" />
     <file path="/menu.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378737345535" ignored="false" />
     <file path="/a.dummy" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378644667326" ignored="false" />
     <file path="/password.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378730900218" ignored="false" />
@@ -57,7 +54,7 @@
       <file leaf-file-name="user.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="52" selection-start="2888" selection-end="2888" vertical-scroll-proportion="0.78532606">
+            <state line="117" column="44" selection-start="3068" selection-end="3068" vertical-scroll-proportion="0.72282606">
               <folding />
             </state>
           </provider>
@@ -539,7 +536,11 @@
       <created>1378737140901</created>
       <updated>1378737140901</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="+ menu bug fixed on change password page&#10;+ new bug spotted: user navbar menu links changing">
+      <created>1378739442750</created>
+      <updated>1378739442750</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -629,7 +630,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ index page bootstrapped" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ menu bug fixed on change password page&#10;+ new bug spotted: user navbar menu links changing" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -667,6 +668,7 @@
     <MESSAGE value="+ edit email field added and fixed the bug" />
     <MESSAGE value="+ twitter bootstrap support" />
     <MESSAGE value="+ index page bootstrapped" />
+    <MESSAGE value="+ menu bug fixed on change password page&#10;+ new bug spotted: user navbar menu links changing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -775,7 +777,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="52" selection-start="2888" selection-end="2888" vertical-scroll-proportion="0.78532606">
+        <state line="117" column="44" selection-start="3068" selection-end="3068" vertical-scroll-proportion="0.72282606">
           <folding />
         </state>
       </provider>

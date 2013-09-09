@@ -102,20 +102,24 @@ exports.changepassword_post = function(req, res){
     api.getUserById(uid, function(err, user){
         if (err) throw err;
         var password = user.pass;
-        if (CurrentPass == password){
-            if(NewPass == ConfirmPass){
-                user.pass = NewPass;
-                user.save(function(err){
-                    if (err) throw err;
-                    api.gotoUser(res, user.name);
-                });
+        if(CurrentPass && NewPass && ConfirmPass)
+        {
+            if (CurrentPass == password){
+                if(NewPass == ConfirmPass){
+                    user.pass = NewPass;
+                    user.save(function(err){
+                        if (err) throw err;
+                        api.gotoUser(res, user.name);
+                    });
+                } else {
+                    res.send('passwords don\'t match!');
+                }
             } else {
-                res.send('passwords don\'t match!');
+                res.send('invalid password');
             }
         } else {
-            res.send('invalid password');
+            res.send('All fields should be filled in!');
         }
-
     })
 };
 
