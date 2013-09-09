@@ -28,7 +28,7 @@ exports.me = function(req, res){
     if (!uid){
         api.gotoHome(res);
     } else {
-        api.getUserById(req.cookies.uid, function(err, user){
+        api.getUserById(uid, function(err, user){
             var username = user.name;
             api.gotoUser(res, username);
         });
@@ -52,7 +52,8 @@ exports.edit_get = function(req, res){
 
 exports.edit_post = function(req, res){
     var formData = req.body;
-    api.getUser(req.params.name, function(err, user){
+    var Params = req.params;
+    api.getUser(Params.name, function(err, user){
         if (err) throw err;
         var newUsername = formData.username;
         user.name = newUsername;
@@ -62,6 +63,36 @@ exports.edit_post = function(req, res){
             api.gotoUser(res, newUsername);
         });
     });
+};
+
+exports.changepassword_get = function(req, res){
+    res.render('./user/password');
+};
+
+exports.changepassword_post = function(req, res){
+    var uid = req.cookies.uid;
+    var formData = req.body;
+    var CurrentPass = formData.currentpass;
+    var NewPass = formData.newpass;
+    var ConfirmPass = formData.confirmpass;
+    api.getUserById(req.cookies.uid, function(err, user){
+        if (err) throw err;
+        var password = user.pass;
+        if (CurrentPass == password){
+            if(NewPass == ConfirmPass){
+                user.pass = NewPass;
+                user.save(function(err){
+                    if (err) throw err;
+                    api.gotoUser(res, user.name);
+                });
+            } else {
+                res.send('passwords don\'t match!');
+            }
+        } else {
+            res.send('invalid password');
+        }
+
+    })
 };
 
 exports.signout = function(req, res){

@@ -76,4 +76,9 @@
     // User profilinde deyisikliyi tesdiqledi
     app.post('/user/:name/edit', user.edit_post);
 
+    // User sifresini deyismek isteyir
+    app.get('/user/:name/edit/password', user.changepassword_get);
+
+    app.post('/user/:name/edit/password', user.changepassword_post);
+
 

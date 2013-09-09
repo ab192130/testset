@@ -34,21 +34,23 @@
     // User qeydiyyatdan kecende
     exports.supUser = function(req, res, api, callback){
         var model = UserModel;
+        var username = req.body.username;
+        var password = req.body.pass;
         // Eger xanalar bos deyilse
-        if (req.body.login && req.body.pass){
+        if (username && password){
             // Find user
-            api.getUser(req.body.login, function(err, data){
+            api.getUser(username, function(err, data){
                 if (err) {throw err;} else {
                     if(data){
                         res.send('User already exists');
     //          console.log(data[0]);
                     } else {
-                        var newUser = new model({name: req.body.login, pass: req.body.pass});
+                        var newUser = new model({name: username, pass: password});
                         newUser.save(function(err){
                             if(err) throw err;
                             callback(newUser._id);
                             res.redirect('/user/me');
-                            console.log('New user signed up %s:%s', req.body.login, req.body.pass);
+                            console.log('New user signed up %s:%s', username, password);
                         });
                     }
                 }
@@ -60,18 +62,20 @@
 
     // User sisteme daxil olanda
     exports.sinUser = function(req, res, api, callback){
-        if (req.body.login && req.body.pass){
-            api.getUser(req.body.login, function(err, data){
+        var username = req.body.username;
+        var password = req.body.pass;
+        if (username && password){
+            api.getUser(username, function(err, data){
                 if (err) {throw err;} else {
                     if (!data) {
                         // Eger bele user movcud deyilse
                         res.send('User not found!');
                     } else {
                         //Eger bele user movcuddursa shifreni yoxlayirig
-                        if(req.body.pass == data.pass) {
+                        if(password == data.pass) {
                             //Dogrudursa
                             callback(data._id);
-                            res.redirect('/user/' + req.body.login);
+                            res.redirect('/user/' + username);
                         } else {
                             //Yanlisdirsa
                             res.send('Invalid Password');

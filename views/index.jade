@@ -12,7 +12,7 @@ block content
     h1 Register
     form#regForm(method="post" action="user/new")
       label Username
-      input#loginInput(type="text", name="login")
+      input#loginInput(type="text", name="username")
       label Password
       input#passInput(type="password", name="pass")
       input#submitBtn(type="submit" value="Sign Up")
@@ -20,7 +20,7 @@ block content
     h1 Sign In
     form#logForm(method="post" action="user/login")
       label Username:
-      input#loginInput(type="text", name="login")
+      input#loginInput(type="text", name="username")
       label Password:
       input#passInput(type="password", name="pass")
       input#submitBtn(type="submit" value="Sign In")
