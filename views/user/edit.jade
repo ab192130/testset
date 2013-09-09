@@ -4,14 +4,12 @@ block content
     h1= user.name
     pre
         form(method="post")
-            label.userInfo Username:
              p
-                input(type="text", value="#{user.name}", name="username")
-            label.userInfo Email:
+                input.form-control(type="text", value="#{user.name}", name="username", placeholder="Username")
              p
-                input(type="text", value="#{user.email}", name="email")
-             input(type="submit", value="Submit")
-        a(href="../#{user.name}/edit/password") Change Password
+                input.form-control(type="text", value="#{user.email}", name="email", placeholder="E-mail")
+             input.btn.btn-primary(type="submit", value="Submit")
+             a.help-block(href="../#{user.name}/edit/password") Change Password
 
 
 
