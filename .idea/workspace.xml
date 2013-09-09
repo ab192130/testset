@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94a9bd73-435f-4b48-8757-30121cab926a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/partials/menu.jade" afterPath="$PROJECT_DIR$/views/partials/menu.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/user/password.jade" afterPath="$PROJECT_DIR$/views/user/password.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="testset.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378739729516" ignored="false" />
+    <file path="/Dummy.txt" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378739788332" ignored="false" />
     <file path="/README.md" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378546909735" ignored="false" />
     <file path="$PROJECT_DIR$/../git.proj01/README" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378540679238" ignored="false" />
     <file path="/README" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378540679238" ignored="false" />
@@ -21,7 +22,7 @@
     <file path="/user.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378739576643" ignored="false" />
     <file path="/menu.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378737345535" ignored="false" />
     <file path="/a.dummy" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378644667326" ignored="false" />
-    <file path="/password.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378730900218" ignored="false" />
+    <file path="/password.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378739985746" ignored="false" />
     <file path="/layout.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378738485427" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,10 +52,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="user.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="44" selection-start="3068" selection-end="3068" vertical-scroll-proportion="0.52112675">
+            <state line="117" column="44" selection-start="3068" selection-end="3068" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -105,10 +106,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="password.jade" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="password.jade" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/user/password.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="4" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
+            <state line="12" column="33" selection-start="533" selection-end="533" vertical-scroll-proportion="0.35915494">
               <folding />
             </state>
           </provider>
@@ -117,7 +118,7 @@
       <file leaf-file-name="menu.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/partials/menu.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="27" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
+            <state line="11" column="24" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -161,11 +162,11 @@
         <option value="$PROJECT_DIR$/views/user/index.jade" />
         <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/views/user/edit.jade" />
-        <option value="$PROJECT_DIR$/views/partials/menu.jade" />
-        <option value="$PROJECT_DIR$/views/user/password.jade" />
         <option value="$PROJECT_DIR$/views/layout.jade" />
         <option value="$PROJECT_DIR$/public/javascripts/jquery.js" />
         <option value="$PROJECT_DIR$/routes/user.js" />
+        <option value="$PROJECT_DIR$/views/partials/menu.jade" />
+        <option value="$PROJECT_DIR$/views/user/password.jade" />
       </list>
     </option>
   </component>
@@ -544,7 +545,11 @@
       <created>1378739735939</created>
       <updated>1378739735939</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="+ jquery js file added">
+      <created>1378739790593</created>
+      <updated>1378739790593</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -634,7 +639,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ bug with empty password fields solved" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ jquery js file added" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -648,7 +653,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="added index html" />
     <MESSAGE value="added project files" />
     <MESSAGE value="added mongoose support and few optimizations for project db" />
     <MESSAGE value="+register new user redirected&#10;+username is busy message added" />
@@ -673,6 +677,7 @@
     <MESSAGE value="+ index page bootstrapped" />
     <MESSAGE value="+ menu bug fixed on change password page&#10;+ new bug spotted: user navbar menu links changing" />
     <MESSAGE value="+ bug with empty password fields solved" />
+    <MESSAGE value="+ jquery js file added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -728,20 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/partials/menu.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="27" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/user/password.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="4" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/api.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="123" column="15" selection-start="3926" selection-end="3929" vertical-scroll-proportion="-4.56">
@@ -781,7 +772,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="44" selection-start="3068" selection-end="3068" vertical-scroll-proportion="0.52112675">
+        <state line="117" column="44" selection-start="3068" selection-end="3068" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/partials/menu.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="24" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/user/password.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="33" selection-start="533" selection-end="533" vertical-scroll-proportion="0.35915494">
           <folding />
         </state>
       </provider>
