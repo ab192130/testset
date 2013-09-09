@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94a9bd73-435f-4b48-8757-30121cab926a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/api.js" afterPath="$PROJECT_DIR$/models/api.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/user/edit.jade" afterPath="$PROJECT_DIR$/views/user/edit.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.jade" afterPath="$PROJECT_DIR$/views/layout.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/user/password.jade" afterPath="$PROJECT_DIR$/views/user/password.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/user.js" afterPath="$PROJECT_DIR$/routes/user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/user/index.jade" afterPath="$PROJECT_DIR$/views/user/index.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="testset.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378740554628" ignored="false" />
+    <file path="/Dummy.txt" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378740955332" ignored="false" />
     <file path="/README.md" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378546909735" ignored="false" />
     <file path="$PROJECT_DIR$/../git.proj01/README" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378540679238" ignored="false" />
     <file path="/README" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378540679238" ignored="false" />
@@ -19,7 +15,7 @@
     <file path="/api.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378740645380" ignored="false" />
     <file path="/app.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378715097042" ignored="false" />
     <file path="/new.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378549016239" ignored="false" />
-    <file path="/index.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378737067084" ignored="false" />
+    <file path="/index.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378741304322" ignored="false" />
     <file path="/edit.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378740865215" ignored="false" />
     <file path="/index.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378712080422" ignored="false" />
     <file path="/user.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378740797129" ignored="false" />
@@ -82,19 +78,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jade" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.jade" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/user/index.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="6" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0">
+            <state line="15" column="32" selection-start="370" selection-end="370" vertical-scroll-proportion="0.6929348">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.jade" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="edit.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/user/edit.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="12" selection-start="264" selection-end="264" vertical-scroll-proportion="0.41576087">
+            <state line="9" column="12" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -151,7 +147,6 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/views/user/new.jade" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/views/user/index.jade" />
         <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/public/javascripts/jquery.js" />
         <option value="$PROJECT_DIR$/views/partials/menu.jade" />
@@ -161,6 +156,7 @@
         <option value="$PROJECT_DIR$/routes/user.js" />
         <option value="$PROJECT_DIR$/views/user/password.jade" />
         <option value="$PROJECT_DIR$/views/user/edit.jade" />
+        <option value="$PROJECT_DIR$/views/user/index.jade" />
       </list>
     </option>
   </component>
@@ -555,7 +551,11 @@
       <created>1378740557238</created>
       <updated>1378740557238</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="+ some page titles added">
+      <created>1378740957875</created>
+      <updated>1378740957875</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -645,7 +645,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ header title added for all pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ some page titles added" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -659,7 +659,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="login and register functions are done.&#10;lets to do cookies and sessions for authentication" />
     <MESSAGE value="+cookie sign in done&#10;+sign out button for own profile WIP" />
     <MESSAGE value="+sign out button and function done&#10;it clears cookie and redirects to home" />
     <MESSAGE value="+bug with sign up cookies were solved" />
@@ -684,6 +683,7 @@
     <MESSAGE value="+ bug with menu links solved&#10;+ change password page bootstrapped" />
     <MESSAGE value="+ edit profile page bootstrapped" />
     <MESSAGE value="+ header title added for all pages" />
+    <MESSAGE value="+ some page titles added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -762,13 +762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/user/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="6" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/layout.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="8" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
@@ -792,7 +785,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/user/edit.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="12" selection-start="264" selection-end="264" vertical-scroll-proportion="0.41576087">
+        <state line="9" column="12" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/user/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="32" selection-start="370" selection-end="370" vertical-scroll-proportion="0.6929348">
           <folding />
         </state>
       </provider>

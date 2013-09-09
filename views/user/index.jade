@@ -5,10 +5,16 @@ block content
         include ..\partials\menu
 
     h1= user.name
-    pre
-     .userInfo= 'ID: ' + user._id
-     .userInfo= 'Pass: ' + user.pass
-     - if (user.email)
-       .userInfo= 'Email: ' + user.email
+    .panel.panel-default
+      .panel-body
+        ul.list-group
+          li.list-group-item
+            .userInfo= 'ID: ' + user._id
+          li.list-group-item
+            .userInfo= 'Password: ' + user.pass
+          li.list-group-item
+            - if (user.email)
+              .userInfo= 'Email: ' + user.email
+
 
 
