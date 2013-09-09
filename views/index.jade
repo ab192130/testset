@@ -1,9 +1,10 @@
 extends layout
 
 block content
+  include .\partials\menu
+
   //Eger istifadeci sisteme daxil olmayibsa
   if user
-    include .\partials\menu
 
     p header
     p content
@@ -12,22 +13,17 @@ block content
     h1 Register
     form(method="post" action="user/new")
       p
-        label Username
-        input(type="text", name="username")
+        input.form-control(type="text", name="username", placeholder="Username")
       p
-        label Password
-        input(type="password", name="pass")
+        input.form-control(type="password", name="pass", placeholder="Password")
       p
-        label Email
-        input(type="text", name="email")
-      input(type="submit" value="Sign Up")
+        input.form-control(type="text", name="email", placeholder="E-mail")
+      input.btn.btn-primary(type="submit" value="Sign Up")
 
     h1 Sign In
     form#logForm(method="post" action="user/login")
       p
-        label Username:
-        input#loginInput(type="text", name="username")
+        input.form-control(type="text", name="username", placeholder="Username")
       p
-        label Password:
-        input#passInput(type="password", name="pass")
-      input#submitBtn(type="submit" value="Sign In")
+        input.form-control(type="password", name="pass", placeholder="Password")
+      input.btn.btn-primary(type="submit" value="Sign In")

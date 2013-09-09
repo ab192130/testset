@@ -1,11 +1,30 @@
-//Userin naviqasiya menyusu
-.userPanel You are logged in:
-    ul.user_menu_btns
-        li
-            a(href="/") Home
-        li
-            a(href="../user/#{user.name}") Profile
-        li
-            a(href="../user/#{user.name}/edit") Edit Profile
-        li
-            a(href="/signout") Sign Out
+
+if (user)
+    //Userin naviqasiya menyusu
+    .nav.navbar.userPanel
+        nav.navbar.navbar-default(role='navigation')
+
+          .collapse.navbar-collapse.navbar-ex1-collapse
+            ul.nav.navbar-nav
+              li
+                a(href="/") Home
+              li
+                a(href="../user/#{user.name}") Profile
+              li
+                a(href="../user/#{user.name}/edit") Edit Profile
+              li
+                a(href="/signout") Sign Out
+else
+    .nav.navbar.userPanel
+        nav.navbar.navbar-default(role='navigation')
+
+            .collapse.navbar-collapse.navbar-ex1-collapse
+                ul.nav.navbar-nav
+                    li
+                        a(href="/") Home
+
+
+
+
+
+

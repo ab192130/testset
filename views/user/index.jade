@@ -1,6 +1,9 @@
 extends ../layout
 
 block content
+    - if (own)
+        include ..\partials\menu
+
     h1= user.name
     pre
      .userInfo= 'ID: ' + user._id
@@ -8,5 +11,4 @@ block content
      - if (user.email)
        .userInfo= 'Email: ' + user.email
 
-    - if (own)
-        include ..\partials\menu
+
