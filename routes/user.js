@@ -24,10 +24,15 @@ exports.profile = function(req, res){
 };
 
 exports.me = function(req, res){
-    api.getUserById(req.cookies.uid, function(err, user){
-        var username = user.name;
-        api.gotoUser(res, username);
-    });
+    var uid = req.cookies.uid;
+    if (!uid){
+        api.gotoHome(res);
+    } else {
+        api.getUserById(req.cookies.uid, function(err, user){
+            var username = user.name;
+            api.gotoUser(res, username);
+        });
+    }
 };
 
 exports.edit_get = function(req, res){

@@ -47,7 +47,7 @@
                         newUser.save(function(err){
                             if(err) throw err;
                             callback(newUser._id);
-                            res.redirect('/user/' + req.body.login);
+                            res.redirect('/user/me');
                             console.log('New user signed up %s:%s', req.body.login, req.body.pass);
                         });
                     }
@@ -118,6 +118,10 @@
     // Yoxla gor user sistemdedi ya yox
     exports.checkAuth = function(cookies){
         return cookies.uid;
+    };
+
+    exports.gotoHome = function(res){
+        res.redirect('/');
     };
 
 
