@@ -14,7 +14,7 @@
 
     var routes = require('./routes');
     var user = require('./routes/user');
-    blog = module.exports = require('./routes/blog');
+    var blog = require('./routes/blog');
 
     // all environments
     app.set('port', process.env.PORT || 3000);

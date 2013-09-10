@@ -5,7 +5,7 @@
 
 
     exports.index = function(req, res){
-        res.render('./blog/index', {title: 'Blogs'});
+        res.render('./blog/index', {title: 'Blogs', user: true});
     };
 
     exports.new_get = function(req, res){
@@ -13,7 +13,7 @@
         if (!uid){
             res.send('Please sign in to post a new blog');
         } else {
-            res.render('./blog/new', {title: 'New Post'});
+            res.render('./blog/new', {title: 'New Post', user: true});
         }
     };
 
