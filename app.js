@@ -14,6 +14,7 @@
 
     var routes = require('./routes');
     var user = require('./routes/user');
+    blog = module.exports = require('./routes/blog');
 
     // all environments
     app.set('port', process.env.PORT || 3000);
@@ -40,7 +41,9 @@
     mongoose.connect('mongodb://localhost/proj01');
     var dbHashes = api.loadModels(mongoose);
     var UserSchema = new Schema(dbHashes.UserHash);
+    var BlogSchema = new Schema(dbHashes.BlogHash);
     UserModel = module.exports = mongoose.model('Users', UserSchema);
+    BlogModel = module.exports = mongoose.model('Blogs', BlogSchema);
 
 
 //    app.use(app.router);
@@ -49,6 +52,18 @@
 
     // User qeydiyyatdan kecir
     app.post('/user/new', user.new);
+
+    // ...
+    app.get('/blog/', blog.index);
+
+    // ...
+    app.get('/blog/new', blog.new_get);
+
+    // ...
+    app.post('/blog/new', blog.new_post);
+
+    // ...
+    app.get('/blog/list', blog.list);
 
     // User sisteme daxil olur
     app.post('/user/login', user.login_post);

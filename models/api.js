@@ -8,6 +8,12 @@
                 name:{type: String},
                 pass:{type: String},
                 email:{type: String}
+            },
+
+            BlogHash: {
+                title: {type: String},
+                content: {type: String},
+                author: {type: String}
             }
         };
 
@@ -127,6 +133,27 @@
 
     exports.gotoHome = function(res){
         res.redirect('/');
+    };
+
+//    exports.getCurrentUser = function(req, res){
+//
+//    };
+
+    /*
+     * Blogs
+     */
+
+    exports.newBlog = function(req, res){
+        var model = BlogModel;
+        var title = req.body.blog_title;
+        var content = req.body.blog_content;
+        var uid = req.cookies.uid;
+
+        var newBlog = new model({title: title, content: content, author: uid});
+        newBlog.save(function(err){
+            if (err) throw err;
+            console.log('saved!');
+        });
     };
 
 
