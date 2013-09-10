@@ -2,9 +2,6 @@
      * Module dependencies.
      */
 
-    // @TODO: pass user object to layout.jade
-    // @TODO: fix bug on top menu bar links for blog pages
-
     var express = require('express');
     var http = require('http');
     var path = require('path');
