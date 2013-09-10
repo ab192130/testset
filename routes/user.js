@@ -70,6 +70,7 @@ exports.edit_post = function(req, res){
         if (formEmail !== oldEmail){
             user.email = formEmail;
         }
+
         user.save(function(err){
             if (err) throw err;
 //          res.send('saved!');

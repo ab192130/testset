@@ -7,7 +7,17 @@ html
   body
     .container
       h4 Project 01
-      block content
+      include \partials\menu
+      .row
+        .col-md-3
+          .panel.panel-default
+            .panel-heading [sidebar title]
+            .panel-body
+              p [sidebar body]
+        .col-md-9
+          .panel.panel-default
+            .panel-body
+              block content
 
-      script(src="/javascripts/jquery.js")
-      script(src="/javascripts/bootstrap.min.js")
+    script(src="/javascripts/jquery.js")
+    script(src="/javascripts/bootstrap.min.js")

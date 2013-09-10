@@ -1,8 +1,8 @@
 extends ../layout
 
 block content
-    - if (own)
-        include ..\partials\menu
+    //- if (own)
+        //include ..\partials\menu
 
     h1= user.name
     .panel.panel-default
@@ -12,8 +12,8 @@ block content
             .userInfo= 'ID: ' + user._id
           li.list-group-item
             .userInfo= 'Password: ' + user.pass
-          li.list-group-item
-            - if (user.email)
+          - if (user.email)
+            li.list-group-item
               .userInfo= 'Email: ' + user.email
 
 
