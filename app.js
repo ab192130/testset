@@ -11,6 +11,8 @@
     api = module.exports.api = require('./models/api');
     app = module.exports = express();
 
+
+
     var routes = require('./routes');
     var user = require('./routes/user');
     var blog = require('./routes/blog');
@@ -25,17 +27,25 @@
     app.use(express.bodyParser());
     app.use(express.methodOverride());
 
-    app.use(express.static(path.join(__dirname, 'public')));
-
     app.use(function(req, res, next) {
+
+        res.on('header', function() {
+            console.trace('HEADERS GOING TO BE WRITTEN');
+        });
+
         var uid = req.cookies.uid;
         if (uid){
             api.getUserById(uid, function(err, user){
                 res.locals.userauth = user;
             });
         }
+
         next();
     });
+
+
+
+    app.use(express.static(path.join(__dirname, 'public')));
 
     // development only
     if ('development' == app.get('env')) {
@@ -54,7 +64,6 @@
     UserModel = module.exports = mongoose.model('Users', UserSchema);
     BlogModel = module.exports = mongoose.model('Blogs', BlogSchema);
 
-//    app.use(app.router);
 
     app.get('/', routes.index);
 
@@ -62,13 +71,13 @@
     app.post('/user/new', user.new);
 
     // ...
-    app.get('/blog', blog.index);
+    app.post('/blog/new', blog.new_post);
 
     // ...
     app.get('/blog/new', blog.new_get);
 
     // ...
-    app.post('/blog/new', blog.new_post);
+    app.get('/blog', blog.index);
 
     // ...
     app.get('/blog/data', blog.data);
@@ -103,5 +112,9 @@
     app.get('/user/:name/edit/password', user.changepassword_get);
 
     app.post('/user/:name/edit/password', user.changepassword_post);
+
+
+
+
 
 

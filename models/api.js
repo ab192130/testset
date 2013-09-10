@@ -33,7 +33,6 @@
         var model = UserModel;
         var user = model.findById(id, function(err,data){
             if (err) throw err;
-            console.log(data);
             callback(err, data);
         });
     };
@@ -168,7 +167,6 @@
         var model = BlogModel;
 
         model.findOne({_id: id}, function(err, data){
-            console.log(data);
             callback(err, data);
         });
     };

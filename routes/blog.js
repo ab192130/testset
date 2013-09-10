@@ -20,12 +20,20 @@
         });
     };
 
+    exports.data = function(req, res){
+        BlogModel.find({}, function(err,data){
+            res.json(data);
+        });
+    };
+
     exports.new_get = function(req, res){
+
+        res.render('./blog/new', {title: 'New Post'});
         var uid = req.cookies.uid;
         if (!uid){
             res.send('Please sign in to post a new blog');
         } else {
-            res.render('./blog/new', {title: 'New Post', user: true});
+            res.render('./blog/new', {title: 'New Post'});
         }
     };
 
@@ -38,12 +46,6 @@
                 if(!err && id) res.redirect('/blog');
             });
         }
-    };
-
-    exports.data = function(req, res){
-        BlogModel.find({}, function(err,data){
-            res.json(data);
-        });
     };
 
 
