@@ -4,10 +4,10 @@
      */
 
 
+
     exports.index = function(req, res){
-        api.getBlogs(function(err, data){
-            var uid = req.cookies.uid;
-            res.render('./blog/index', {title: 'Blogs', blogs: data, user: uid ? true:false});
+        api.getBlogs(function(err, blogs){
+            res.render('./blog/index', {title: 'Blogs', blogs: blogs});
          });
 //        res.render('./blog/index', {title: 'Blogs', user: true});
     };
@@ -16,7 +16,7 @@
         var bid = req.params.id;
         api.getBlog(bid, function(err, blog){
             var uid = req.cookies.uid;
-            res.render('./blog/view', {title: blog.title, blog: blog, user: uid ? true:false});
+            res.render('./blog/view', {title: blog.title, blog: blog});
         });
     };
 
@@ -45,11 +45,6 @@
             res.json(data);
         });
     };
-
-
-
-
-
 
 
 

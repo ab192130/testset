@@ -11,7 +11,7 @@
     var mongoose = require('mongoose');
     var Schema = mongoose.Schema;
 
-    api = module.exports = require('./models/api');
+    api = module.exports.api = require('./models/api');
     app = module.exports = express();
 
     var routes = require('./routes');
@@ -30,6 +30,16 @@
 
     app.use(express.static(path.join(__dirname, 'public')));
 
+    app.use(function(req, res, next) {
+        var uid = req.cookies.uid;
+        if (uid){
+            api.getUserById(uid, function(err, user){
+                res.locals.userauth = user;
+            });
+        }
+        next();
+    });
+
     // development only
     if ('development' == app.get('env')) {
       app.use(express.errorHandler());
@@ -46,7 +56,6 @@
     var BlogSchema = new Schema(dbHashes.BlogHash);
     UserModel = module.exports = mongoose.model('Users', UserSchema);
     BlogModel = module.exports = mongoose.model('Blogs', BlogSchema);
-
 
 //    app.use(app.router);
 

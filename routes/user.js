@@ -127,3 +127,8 @@ exports.changepassword_post = function(req, res){
 exports.signout = function(req, res){
     api.soutUser(req, res);
 };
+
+exports.currUser = function(){
+    var module = UserModule;
+    api.getUserById()
+};

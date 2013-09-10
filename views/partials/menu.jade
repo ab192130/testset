@@ -1,5 +1,5 @@
 
-if (user)
+if (userauth)
     //Userin naviqasiya menyusu
     .nav.navbar.userPanel
         nav.navbar.navbar-default(role='navigation')
@@ -8,16 +8,18 @@ if (user)
             ul.nav.navbar-nav
               li
                 a(href="/") Home
+              li
+                a(href="/blog") Blogs
 
             ul.nav.navbar-nav.navbar-right
               li.dropdown
-                a(href="#", class="dropdown-toggle", data-toggle="dropdown")= user.name
+                a(href="#", class="dropdown-toggle", data-toggle="dropdown")= userauth.name
                   b.caret
                 ul.dropdown-menu
                   li
-                    a(href="/user/#{user.name}") Profile
+                    a(href="/user/#{userauth.name}") Profile
                   li
-                    a(href="/user/#{user.name}/edit") Edit Profile
+                    a(href="/user/#{userauth.name}/edit") Edit Profile
                   li
                     a(href="/signout") Sign Out
 else
@@ -28,6 +30,8 @@ else
                 ul.nav.navbar-nav
                     li
                         a(href="/") Home
+                    li
+                        a(href="/blog") Blogs
                 ul.nav.navbar-nav.navbar-right
                     li
                         form.navbar-form.navbar-left(method="post" action="/user/login")

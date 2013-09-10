@@ -5,6 +5,7 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
   body
+
     .container
       h4 Project 01
       include \partials\menu
@@ -13,11 +14,13 @@ html
           .panel.panel-default
             .panel-heading [sidebar title]
             .panel-body
-              p [sidebar body]
+              = userauth
         .col-md-9
           .panel.panel-default
             .panel-body
               block content
+
+
 
     script(src="/javascripts/jquery.js")
     script(src="/javascripts/bootstrap.min.js")
