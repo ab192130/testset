@@ -28,7 +28,7 @@
         }
     };
 
-    exports.list = function(req, res){
+    exports.data = function(req, res){
         BlogModel.find({}, function(err,data){
             res.json(data);
         });

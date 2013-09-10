@@ -63,7 +63,7 @@
     app.post('/blog/new', blog.new_post);
 
     // ...
-    app.get('/blog/list', blog.list);
+    app.get('/blog/data', blog.data);
 
     // User sisteme daxil olur
     app.post('/user/login', user.login_post);
