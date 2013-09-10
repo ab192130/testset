@@ -5,7 +5,11 @@
 
 
     exports.index = function(req, res){
-        res.render('./blog/index', {title: 'Blogs', user: true});
+
+         api.getBlogs(function(err, data){
+            res.render('./blog/index', {title: 'Blogs', blogs: data});
+         });
+//        res.render('./blog/index', {title: 'Blogs', user: true});
     };
 
     exports.new_get = function(req, res){

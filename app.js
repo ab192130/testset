@@ -1,7 +1,8 @@
-
     /**
      * Module dependencies.
      */
+
+    // @TODO: pass user object to layout.jade
 
     var express = require('express');
     var http = require('http');

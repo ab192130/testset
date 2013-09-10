@@ -5,3 +5,7 @@ block content
       .pull-right
         a.btn.btn-default(href="/blog/new") New Post
 
+    - each blog in blogs
+        li
+           a(href="#") #{blog.title}
+

@@ -156,5 +156,13 @@
         });
     };
 
+    exports.getBlogs = function(callback){
+        var model = BlogModel;
+
+        model.find({}, function(err, data){
+            callback(err, data);
+        });
+    };
+
 
 
