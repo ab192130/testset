@@ -5,11 +5,11 @@
 
 
     exports.index = function(req, res){
-        res.render('./blog/index');
+        res.render('./blog/index', {title: 'Blogs'});
     };
 
     exports.new_get = function(req, res){
-        res.render('./blog/new');
+        res.render('./blog/new', {title: 'New Post'});
     };
 
     exports.new_post = function(req, res){
