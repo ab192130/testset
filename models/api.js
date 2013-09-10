@@ -164,5 +164,14 @@
         });
     };
 
+    exports.getBlog = function(id, callback){
+        var model = BlogModel;
+
+        model.findOne({_id: id}, function(err, data){
+            console.log(data);
+            callback(err, data);
+        });
+    };
+
 
 

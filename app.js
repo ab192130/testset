@@ -55,7 +55,7 @@
     app.post('/user/new', user.new);
 
     // ...
-    app.get('/blog/', blog.index);
+    app.get('/blog', blog.index);
 
     // ...
     app.get('/blog/new', blog.new_get);
@@ -65,6 +65,9 @@
 
     // ...
     app.get('/blog/data', blog.data);
+
+    // ...
+    app.get('/blog/:id', blog.view);
 
     // User sisteme daxil olur
     app.post('/user/login', user.login_post);

@@ -5,11 +5,19 @@
 
 
     exports.index = function(req, res){
-
-         api.getBlogs(function(err, data){
-            res.render('./blog/index', {title: 'Blogs', blogs: data});
+        api.getBlogs(function(err, data){
+            var uid = req.cookies.uid;
+            res.render('./blog/index', {title: 'Blogs', blogs: data, user: uid ? true:false});
          });
 //        res.render('./blog/index', {title: 'Blogs', user: true});
+    };
+
+    exports.view = function(req, res){
+        var bid = req.params.id;
+        api.getBlog(bid, function(err, blog){
+            var uid = req.cookies.uid;
+            res.render('./blog/view', {title: blog.title, blog: blog, user: uid ? true:false});
+        });
     };
 
     exports.new_get = function(req, res){
@@ -27,7 +35,7 @@
             res.send('Please sign in to post a new blog');
         } else {
             api.newBlog(req, res, function(err, id){
-                if(!err && id) res.redirect('/blog/list');
+                if(!err && id) res.redirect('/blog');
             });
         }
     };
@@ -37,3 +45,13 @@
             res.json(data);
         });
     };
+
+
+
+
+
+
+
+
+
+

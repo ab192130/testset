@@ -5,7 +5,10 @@ block content
       .pull-right
         a.btn.btn-default(href="/blog/new") New Post
 
+    ul.list-group
     - each blog in blogs
-        li
-           a(href="#") #{blog.title}
+      li.list-group-item
+         a(href="/blog/#{blog._id}") #{blog.title}
+         .pull-right
+           button.close(type="button", aria-hidden="true") &times;
 
