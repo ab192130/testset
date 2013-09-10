@@ -9,13 +9,23 @@
     };
 
     exports.new_get = function(req, res){
-        res.render('./blog/new', {title: 'New Post'});
+        var uid = req.cookies.uid;
+        if (!uid){
+            res.send('Please sign in to post a new blog');
+        } else {
+            res.render('./blog/new', {title: 'New Post'});
+        }
     };
 
     exports.new_post = function(req, res){
-        api.newBlog(req, res, function(err, id){
-            if(!err && id) res.redirect('/blog/list');
-        });
+        var uid = req.cookies.uid;
+        if (!uid){
+            res.send('Please sign in to post a new blog');
+        } else {
+            api.newBlog(req, res, function(err, id){
+                if(!err && id) res.redirect('/blog/list');
+            });
+        }
     };
 
     exports.list = function(req, res){
