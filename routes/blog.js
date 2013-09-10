@@ -13,8 +13,9 @@
     };
 
     exports.new_post = function(req, res){
-        api.newBlog(req, res);
-        res.redirect('/blog/list');
+        api.newBlog(req, res, function(err, id){
+            if(!err && id) res.redirect('/blog/list');
+        });
     };
 
     exports.list = function(req, res){

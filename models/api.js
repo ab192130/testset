@@ -143,7 +143,7 @@
      * Blogs
      */
 
-    exports.newBlog = function(req, res){
+    exports.newBlog = function(req, res, callback){
         var model = BlogModel;
         var title = req.body.blog_title;
         var content = req.body.blog_content;
@@ -152,7 +152,7 @@
         var newBlog = new model({title: title, content: content, author: uid});
         newBlog.save(function(err){
             if (err) throw err;
-            console.log('saved!');
+            callback(err, newBlog._id);
         });
     };
 
