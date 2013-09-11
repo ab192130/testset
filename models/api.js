@@ -142,13 +142,10 @@
      * Blogs
      */
 
-    exports.newBlog = function(req, res, callback){
+    exports.newBlog = function(args, callback){
         var model = BlogModel;
-        var title = req.body.blog_title;
-        var content = req.body.blog_content;
-        var uid = req.cookies.uid;
 
-        var newBlog = new model({title: title, content: content, author: uid});
+        var newBlog = new model(args);
         newBlog.save(function(err){
             if (err) throw err;
             callback(err, newBlog._id);

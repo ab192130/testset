@@ -11,8 +11,6 @@
     api = module.exports.api = require('./models/api');
     app = module.exports = express();
 
-
-
     var routes = require('./routes');
     var user = require('./routes/user');
     var blog = require('./routes/blog');
@@ -28,18 +26,14 @@
     app.use(express.methodOverride());
 
     app.use(function(req, res, next) {
-
         var uid = req.cookies.uid;
         if (uid){
             api.getUserById(uid, function(err, user){
                 res.locals.userauth = user;
             });
         }
-
         next();
     });
-
-
 
     app.use(express.static(path.join(__dirname, 'public')));
 

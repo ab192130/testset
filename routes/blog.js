@@ -37,10 +37,12 @@
 
     exports.new_post = function(req, res){
         var uid = req.cookies.uid;
+        var title = req.body.blog_title;
+        var content = req.body.blog_content;
         if (!uid){
             res.send('Please sign in to post a new blog');
         } else {
-            api.newBlog(req, res, function(err, id){
+            api.newBlog({title: title, content: content, author: uid}, function(err, id){
                 if(!err && id) res.redirect('/blog');
             });
         }
