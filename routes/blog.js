@@ -27,8 +27,6 @@
     };
 
     exports.new_get = function(req, res){
-
-        res.render('./blog/new', {title: 'New Post'});
         var uid = req.cookies.uid;
         if (!uid){
             res.send('Please sign in to post a new blog');

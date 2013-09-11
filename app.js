@@ -29,10 +29,6 @@
 
     app.use(function(req, res, next) {
 
-        res.on('header', function() {
-            console.trace('HEADERS GOING TO BE WRITTEN');
-        });
-
         var uid = req.cookies.uid;
         if (uid){
             api.getUserById(uid, function(err, user){
