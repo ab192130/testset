@@ -66,30 +66,31 @@
     };
 
     // User sisteme daxil olanda
-    exports.sinUser = function(req, res, api, callback){
-        var username = req.body.username;
-        var password = req.body.pass;
+    exports.sinUser = function(args, callback){
+        var username = args.name;
+        var password = args.pass;
         if (username && password){
-            api.getUser(username, function(err, data){
+            api.getUser(username, function(err, user){
                 if (err) {throw err;} else {
-                    if (!data) {
+                    if (!user) {
                         // Eger bele user movcud deyilse
-                        res.send('User not found!');
+                        callback('user_not_found');
                     } else {
                         //Eger bele user movcuddursa shifreni yoxlayirig
-                        if(password == data.pass) {
+                        if(password == user.pass) {
                             //Dogrudursa
-                            callback(data._id);
-                            res.redirect('/user/' + username);
+                            callback({uid: user._id});
+//                            res.redirect('/user/' + username);
                         } else {
                             //Yanlisdirsa
-                            res.send('Invalid Password');
+                            callback('invalid_password');
                         }
                     }
                 }
             });
         } else {
-            res.send('Do not leave empty field!');
+//          res.send('Do not leave empty field!');
+            callback('empty_fields');
         }
     };
 

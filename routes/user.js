@@ -23,8 +23,26 @@ exports.new = function(req, res){
 };
 
 exports.login_post = function(req, res){
-    api.sinUser(req, res, api, function(uid){
-        res.cookie('uid', uid); //kukiye yazag
+    var username = req.body.username;
+    var password = req.body.pass;
+
+    api.sinUser({name: username, pass: password}, function(data){
+        if(data == 'empty_fields'){
+            res.send('Empty fields');
+        } else {
+//            res.send(data.uid);
+            if(data == 'user_not_found'){
+                res.send('User not found!');
+            } else {
+                if(data == 'invalid_password'){
+                    res.send('Invalid Password');
+                } else {
+                    res.cookie('uid', data.uid); //kukiye yazag
+                    res.redirect('/user/' + username);
+
+                }
+            }
+        }
     });
 };
 
