@@ -38,11 +38,11 @@
     };
 
     // User qeydiyyatdan kecende
-    exports.supUser = function(req, res, api, callback){
+    exports.supUser = function(args, callback){
         var model = UserModel;
-        var username = req.body.username;
-        var password = req.body.pass;
-        var email = req.body.email;
+        var username = args.name;
+        var password = args.pass;
+        var email = args.email;
 
         // Eger xanalar bos deyilse
         if (username && password && email){
@@ -50,19 +50,18 @@
             api.getUser(username, function(err, data){
                 if (err) {throw err;} else {
                     if(data){
-                        res.send('User already exists');
+                        callback({uid: null});
                     } else {
-                        var newUser = new model({name: username, pass: password, email: email});
+                        var newUser = new model(args);
                         newUser.save(function(err){
                             if(err) throw err;
-                            callback(newUser._id);
-                            res.redirect('/user/me');
+                            callback({uid: newUser._id});
                         });
                     }
                 }
             });
         } else {
-            res.send('All fields should be filled in!');
+            callback({error: 'Dont leave empty field!'});
         }
     };
 

@@ -4,8 +4,21 @@
  */
 
 exports.new = function(req, res){
-    api.supUser(req, res, api, function(uid){
-        res.cookie('uid', uid); //kukiye yazag
+    var username = req.body.username;
+    var password = req.body.pass;
+    var email = req.body.email;
+
+    api.supUser({name: username, pass: password, email: email}, function(data){
+        if(data.error){
+            res.send(data.error);
+        } else {
+            if(data.uid){
+                res.cookie('uid', data.uid); //kukiye yazag
+                res.redirect('/user/me');
+            } else {
+                res.send('Username is busy');
+            }
+        }
     });
 };
 
