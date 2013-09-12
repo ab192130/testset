@@ -70,6 +70,15 @@
         });
     };
 
+    exports.delete = function(req, res){
+        var bid = req.params.id;
+        api.getBlog(bid, function(err, blog){
+            blog.remove(function(err){
+                res.redirect('/blog');
+            });
+        });
+    };
+
 
 
 

@@ -81,6 +81,9 @@
     // Bloqu redakte etmek
     app.post('/blog/:id/edit', blog.edit_post);
 
+    // Bloqu redakte etmek
+    app.get('/blog/:id/delete', blog.delete);
+
     // User sisteme daxil olur
     app.post('/user/login', user.login_post);
 
