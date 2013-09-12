@@ -3,7 +3,7 @@
      * Blogs
      */
 
-
+    //@TODO: send html tags with textarea when post a new blog
 
     exports.index = function(req, res){
         api.getBlogs(function(err, blogs){
@@ -39,11 +39,14 @@
         var uid = req.cookies.uid;
         var title = req.body.blog_title;
         var content = req.body.blog_content;
+        content = content.replace(/\r\n/, "\n");
+//        content = content.replace(/(\r\n|\n|\r)/gm, "<br>");
         if (!uid){
             res.send('Please sign in to post a new blog');
         } else {
+            console.log(content);
             api.newBlog({title: title, content: content, author: uid}, function(err, id){
-                if(!err && id) res.redirect('/blog');
+                if(!err && id) res.redirect('/blog/' + id);
             });
         }
     };

@@ -8,8 +8,8 @@
     var mongoose = require('mongoose');
     var Schema = mongoose.Schema;
 
-    api = module.exports.api = require('./models/api');
-    app = module.exports = express();
+    api = module.exports.api = require('./lib/api');
+    app = module.exports.app = express();
 
     var routes = require('./routes');
     var user = require('./routes/user');
