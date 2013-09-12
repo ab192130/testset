@@ -6,7 +6,7 @@ block content
     - text = text.replace( /\r\n|\r|\n/g, '<br/>' )
     //- htmlText = $('<div><span id='box'>Hi, I am a span box</span></div>')
 
-    .help-block(style="font-size: 11px;") Author: &nbsp
+    .help-block(style="font-size: 11px;") Author:&nbsp
       a(href="/user/#{author.name}") #{author.name}
       | &nbsp|
       | Date: #{blog.date}
@@ -14,5 +14,5 @@ block content
 
     p
       .btn-group
+        a.help-block.btn.btn-default.btn-sm(href="./#{blog._id}/delete") Delete
         a.help-block.btn.btn-default.btn-sm(href="./#{blog._id}/edit") Edit
-        a.help-block.btn.btn-danger.btn-sm(href="./#{blog._id}/delete") Delete
