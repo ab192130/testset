@@ -60,20 +60,26 @@
     // User qeydiyyatdan kecir
     app.post('/user/new', user.new);
 
-    // ...
+    // Yeni blog gondermek
     app.post('/blog/new', blog.new_post);
 
-    // ...
+    // Yeni blog yazmaq
     app.get('/blog/new', blog.new_get);
 
-    // ...
+    // Bloqlarin siyahisi (ana sehifesi)
     app.get('/blog', blog.index);
 
-    // ...
+    // Bloq melumat bazasi (json)
     app.get('/blog/data', blog.data);
 
-    // ...
+    // Bloqu oxumaq
     app.get('/blog/:id', blog.view);
+
+    // Bloqu redakte etmek
+    app.get('/blog/:id/edit', blog.edit_get);
+
+    // Bloqu redakte etmek
+    app.post('/blog/:id/edit', blog.edit_post);
 
     // User sisteme daxil olur
     app.post('/user/login', user.login_post);

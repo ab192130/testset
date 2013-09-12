@@ -1,0 +1,11 @@
+extends  ../layout
+block content
+    h1 Edit Blog
+        form(method="post")
+            p
+                input.form-control(type="text", name="blog_title", placeholder="Title", value="#{blog.title}")
+            p
+                textarea.form-control(name="blog_content", placeholder="Text", rows=10) #{blog.content}
+            input.btn.btn-primary(type="submit", value="Post")
+
+

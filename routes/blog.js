@@ -51,6 +51,24 @@
         }
     };
 
+    exports.edit_get = function(req, res){
+        var bid = req.params.id;
+        api.getBlog(bid, function(err, blog){
+            res.render('./blog/edit', {blog: blog});
+        });
+    };
+
+    exports.edit_post = function(req, res){
+        var bid = req.params.id;
+        api.getBlog(bid, function(err, blog){
+            blog.title = req.body.blog_title;
+            blog.content = req.body.blog_content;
+            blog.save(function(err){
+                res.redirect('/blog/' + blog._id);
+            });
+        });
+    };
+
 
 
 
