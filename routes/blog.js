@@ -42,7 +42,7 @@
         var title = req.body.blog_title;
         var content = req.body.blog_content;
         var date = Date.now();
-        content = content.replace(/\r\n/, "\n");
+//        content = content.replace(/\r\n/, "\n");
 //        content = content.replace(/(\r\n|\n|\r)/gm, "<br>");
         if (!uid){
             res.send('Please sign in to post a new blog');

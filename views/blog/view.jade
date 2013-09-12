@@ -10,7 +10,7 @@ block content
       a(href="/user/#{author.name}") #{author.name}
       | &nbsp|
       | Date: #{blog.date}
-    article= text
+    article !{text}
 
     p
       .btn-group
