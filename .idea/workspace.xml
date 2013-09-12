@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94a9bd73-435f-4b48-8757-30121cab926a" name="Default" comment="+ bug with blog post html content SOLVED">
+    <list default="true" id="94a9bd73-435f-4b48-8757-30121cab926a" name="Default" comment="+ added checking if user is author of blog post in blog/view">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/blog.js" afterPath="$PROJECT_DIR$/routes/blog.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.jade" afterPath="$PROJECT_DIR$/views/layout.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/blog/new.jade" afterPath="$PROJECT_DIR$/views/blog/new.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/blog/view.jade" afterPath="$PROJECT_DIR$/views/blog/view.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="testset.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378995705767" ignored="false" />
+    <file path="/Dummy.txt" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378998833193" ignored="false" />
     <file path="/README.md" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378546909735" ignored="false" />
     <file path="$PROJECT_DIR$/../git.proj01/README" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378540679238" ignored="false" />
     <file path="/README" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378540679238" ignored="false" />
@@ -25,8 +26,8 @@
     <file path="/a.dummy" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378974562879" ignored="false" />
     <file path="/password.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378741767724" ignored="false" />
     <file path="/layout.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378842049412" ignored="false" />
-    <file path="/blog.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378995104911" ignored="false" />
-    <file path="/view.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378995823228" ignored="false" />
+    <file path="/blog.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378998975474" ignored="false" />
+    <file path="/view.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378998511981" ignored="false" />
     <file path="/config.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378913040643" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../nodeJS/Examples/[archives]/mean-demo-blog-master/mean-demo-blog-master/app.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378973960420" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../nodeJS/Examples/[archives]/mean-demo-blog-master/mean-demo-blog-master/lib/post.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378973928796" ignored="false" />
@@ -53,25 +54,25 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="46" selection-start="2358" selection-end="2358" vertical-scroll-proportion="0.0">
+            <state line="75" column="32" selection-start="2130" selection-end="2130" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="blog.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="blog.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/blog.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="52" selection-start="2353" selection-end="2353" vertical-scroll-proportion="0.0">
+            <state line="74" column="0" selection-start="2346" selection-end="2346" vertical-scroll-proportion="0.7585302">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.jade" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="view.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/blog/view.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="36" selection-start="414" selection-end="414" vertical-scroll-proportion="0.62467194">
+            <state line="2" column="6" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -89,7 +90,7 @@
       <file leaf-file-name="new.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/blog/new.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="80" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0">
+            <state line="2" column="6" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -98,7 +99,7 @@
       <file leaf-file-name="layout.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/layout.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="41" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -152,12 +153,12 @@
         <option value="$PROJECT_DIR$/config.js" />
         <option value="$PROJECT_DIR$/models/api.js" />
         <option value="$PROJECT_DIR$/views/blog/edit.jade" />
-        <option value="$PROJECT_DIR$/views/blog/new.jade" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/lib/api.js" />
-        <option value="$PROJECT_DIR$/routes/blog.js" />
-        <option value="$PROJECT_DIR$/views/blog/view.jade" />
         <option value="$PROJECT_DIR$/views/layout.jade" />
+        <option value="$PROJECT_DIR$/views/blog/new.jade" />
+        <option value="$PROJECT_DIR$/views/blog/view.jade" />
+        <option value="$PROJECT_DIR$/routes/blog.js" />
       </list>
     </option>
   </component>
@@ -627,7 +628,11 @@
       <created>1378994551802</created>
       <updated>1378994551802</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="+ added checking if user is author of blog post in blog/view">
+      <created>1378996999507</created>
+      <updated>1378996999507</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -717,7 +722,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ bug with blog post html content SOLVED" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ added checking if user is author of blog post in blog/view" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -731,7 +736,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="+ blogs added&#10;+ posting blog page and functionality added&#10;+ viewing blog list in json&#10;" />
     <MESSAGE value="+ newBlog() returns blog ID" />
     <MESSAGE value="+ New Post button added to blog index page" />
     <MESSAGE value="+ User must sign in to post a blog or view post blog page" />
@@ -756,6 +760,7 @@
     <MESSAGE value="+ blog post author link added" />
     <MESSAGE value="+ few changes" />
     <MESSAGE value="+ bug with blog post html content SOLVED" />
+    <MESSAGE value="+ added checking if user is author of blog post in blog/view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -803,13 +808,6 @@
         <state line="900" column="10" selection-start="22975" selection-end="22975" vertical-scroll-proportion="0.33333334" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/blog/new.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="80" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/blog/edit.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="86" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
@@ -831,30 +829,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/blog.js">
+    <entry file="file://$PROJECT_DIR$/views/layout.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="52" selection-start="2353" selection-end="2353" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="46" selection-start="2358" selection-end="2358" vertical-scroll-proportion="0.0">
+        <state line="75" column="32" selection-start="2130" selection-end="2130" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.jade">
+    <entry file="file://$PROJECT_DIR$/views/blog/new.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="41" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0">
+        <state line="2" column="6" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/blog/view.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="36" selection-start="414" selection-end="414" vertical-scroll-proportion="0.62467194">
+        <state line="2" column="6" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/blog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="0" selection-start="2346" selection-end="2346" vertical-scroll-proportion="0.7585302">
           <folding />
         </state>
       </provider>

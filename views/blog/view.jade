@@ -1,6 +1,6 @@
 extends ../layout
 block content
-    h2= blog.title
+    h3= blog.title
 
     - text = blog.content
     - text = text.replace( /\r\n|\r|\n/g, '<br/>' )

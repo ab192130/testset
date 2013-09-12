@@ -13,6 +13,7 @@
     };
 
     exports.view = function(req, res){
+        res.header('X-XSS-PROTECTION', 0);
         var bid = req.params.id;
         api.getBlog(bid, function(err, blog){
             var uid = req.cookies.uid;
@@ -70,9 +71,7 @@
             blog.title = req.body.blog_title;
             blog.content = req.body.blog_content;
             blog.save(function(err){
-                res.header('X-XSS-PROTECTION', 1);
                 res.redirect('/blog/' + blog._id);
-                console.log(req.get('X-XSS-PROTECTION'));
             });
         });
     };
