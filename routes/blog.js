@@ -16,7 +16,11 @@
         var bid = req.params.id;
         api.getBlog(bid, function(err, blog){
             var uid = req.cookies.uid;
-            res.render('./blog/view', {title: blog.title, blog: blog});
+            api.getUserById(blog.author, function(err, author){
+                res.render('./blog/view', {title: blog.title, blog: blog, author: author});
+//                res.json(author);
+            });
+
         });
     };
 
