@@ -49,7 +49,10 @@
         } else {
             console.log(content);
             api.newBlog({title: title, content: content, author: uid, date: date}, function(err, id){
-                if(!err && id) res.redirect('/blog/' + id);
+                if(!err && id) {
+                    res.redirect('/blog/' + id);
+//                    res.header('X-XSS-PROTECTION', 0);
+                }
             });
         }
     };
@@ -67,7 +70,9 @@
             blog.title = req.body.blog_title;
             blog.content = req.body.blog_content;
             blog.save(function(err){
+                res.header('X-XSS-PROTECTION', 1);
                 res.redirect('/blog/' + blog._id);
+                console.log(req.get('X-XSS-PROTECTION'));
             });
         });
     };
