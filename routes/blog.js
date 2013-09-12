@@ -13,11 +13,11 @@
     };
 
     exports.view = function(req, res){
-        res.header('X-XSS-PROTECTION', 0);
         var bid = req.params.id;
         api.getBlog(bid, function(err, blog){
             var uid = req.cookies.uid;
             api.getUserById(blog.author, function(err, author){
+                res.header('X-XSS-Protection', 0);
                 res.render('./blog/view', {title: blog.title, blog: blog, author: author});
             });
         });
