@@ -8,7 +8,7 @@
     </list>
     <ignored path="testset.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378982983621" ignored="false" />
+    <file path="/Dummy.txt" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378992165751" ignored="false" />
     <file path="/README.md" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378546909735" ignored="false" />
     <file path="$PROJECT_DIR$/../git.proj01/README" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378540679238" ignored="false" />
     <file path="/README" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378540679238" ignored="false" />
@@ -25,7 +25,7 @@
     <file path="/password.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378741767724" ignored="false" />
     <file path="/layout.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378842049412" ignored="false" />
     <file path="/blog.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378991622109" ignored="false" />
-    <file path="/view.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378992085322" ignored="false" />
+    <file path="/view.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378992449273" ignored="false" />
     <file path="/config.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378913040643" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../nodeJS/Examples/[archives]/mean-demo-blog-master/mean-demo-blog-master/app.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378973960420" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../nodeJS/Examples/[archives]/mean-demo-blog-master/mean-demo-blog-master/lib/post.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378973928796" ignored="false" />
@@ -61,7 +61,7 @@
       <file leaf-file-name="blog.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/blog.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="30" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0">
+            <state line="21" column="30" selection-start="678" selection-end="678" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -70,7 +70,7 @@
       <file leaf-file-name="view.jade" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/blog/view.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="377" selection-end="377" vertical-scroll-proportion="0.62467194">
+            <state line="16" column="8" selection-start="407" selection-end="407" vertical-scroll-proportion="0.71391076">
               <folding />
             </state>
           </provider>
@@ -610,7 +610,11 @@
       <created>1378982987286</created>
       <updated>1378982987286</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="+ blog post author link added">
+      <created>1378992170000</created>
+      <updated>1378992170000</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -700,7 +704,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ added post delete function/link" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ blog post author link added" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -714,7 +718,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="+ some buttons renamed" />
     <MESSAGE value="+ sign in fields added to no member menu on header" />
     <MESSAGE value="+ layout changes" />
     <MESSAGE value="+ blogs added&#10;+ posting blog page and functionality added&#10;+ viewing blog list in json&#10;" />
@@ -739,6 +742,7 @@
     <MESSAGE value="+ added edit button for blog view" />
     <MESSAGE value="+ adds post date of blog when submitted" />
     <MESSAGE value="+ added post delete function/link" />
+    <MESSAGE value="+ blog post author link added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -830,14 +834,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/blog.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="30" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0">
+        <state line="21" column="30" selection-start="678" selection-end="678" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/blog/view.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="377" selection-end="377" vertical-scroll-proportion="0.62467194">
+        <state line="16" column="8" selection-start="407" selection-end="407" vertical-scroll-proportion="0.71391076">
           <folding />
         </state>
       </provider>

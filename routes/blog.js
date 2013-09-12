@@ -18,9 +18,7 @@
             var uid = req.cookies.uid;
             api.getUserById(blog.author, function(err, author){
                 res.render('./blog/view', {title: blog.title, blog: blog, author: author});
-//                res.json(author);
             });
-
         });
     };
 
