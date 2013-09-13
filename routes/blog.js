@@ -19,7 +19,9 @@
                 res.header('X-XSS-Protection', 0);
 
                 api.getComments(c, function(err, comments){
+//                    if(err) throw err;
                     res.render('./blog/view', {title: blog.title, blog: blog, author: author, comments: comments});
+//                    res.json(comments);
                 });
 
             });
