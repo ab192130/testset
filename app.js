@@ -10,10 +10,12 @@
 
     api = module.exports.api = require('./lib/api');
     app = module.exports.app = express();
+    comment = module.exports = require('./routes/comment');
 
     var routes = require('./routes');
     var user = require('./routes/user');
     var blog = require('./routes/blog');
+
 
     // all environments
     app.set('port', process.env.PORT || 3000);
@@ -51,8 +53,10 @@
     var dbHashes = api.loadModels(mongoose);
     var UserSchema = new Schema(dbHashes.UserHash);
     var BlogSchema = new Schema(dbHashes.BlogHash);
+    var CommentSchema = new Schema(dbHashes.CommentHash);
     UserModel = module.exports = mongoose.model('Users', UserSchema);
     BlogModel = module.exports = mongoose.model('Blogs', BlogSchema);
+    CommentModel = module.exports = mongoose.model('Comments', CommentSchema);
 
 
     app.get('/', routes.index);
@@ -74,6 +78,9 @@
 
     // Bloqu oxumaq
     app.get('/blog/:id', blog.view);
+
+    // Bloqa sherh yazmaz
+    app.post('/blog/:id', blog.addcomment);
 
     // Bloqu redakte etmek
     app.get('/blog/:id/edit', blog.edit_get);
@@ -110,7 +117,11 @@
     // User sifresini deyismek isteyir
     app.get('/user/:name/edit/password', user.changepassword_get);
 
+    // ...
     app.post('/user/:name/edit/password', user.changepassword_post);
+
+    // Sherhlerin siyahisi (json)
+    app.get('/comment/data', comment.data);
 
 
 

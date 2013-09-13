@@ -17,3 +17,13 @@ block content
         .btn-group
           a.help-block.btn.btn-default.btn-sm(href="./#{blog._id}/delete") Delete
           a.help-block.btn.btn-default.btn-sm(href="./#{blog._id}/edit") Edit
+
+    if comments
+      pre
+        each comment in comments
+            p= comment.author + ' - ' + comment.content
+
+    form(method="post")
+        textarea.form-control(rows=5, name="comment_content", placeholder="What do you think about it?")
+        pre
+          input.btn.btn-primary(type="submit", value="Add comment")

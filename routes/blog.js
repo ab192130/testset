@@ -14,11 +14,16 @@
 
     exports.view = function(req, res){
         var bid = req.params.id;
+        var c = {parent: {object: 'blog', id: bid}};
         api.getBlog(bid, function(err, blog){
             var uid = req.cookies.uid;
             api.getUserById(blog.author, function(err, author){
                 res.header('X-XSS-Protection', 0);
-                res.render('./blog/view', {title: blog.title, blog: blog, author: author});
+
+                api.getComments(c, function(err, comments){
+                    res.render('./blog/view', {title: blog.title, blog: blog, author: author, comments: comments});
+                });
+
             });
         });
     };
@@ -82,6 +87,24 @@
             blog.remove(function(err){
                 res.redirect('/blog');
             });
+        });
+    };
+
+    exports.addcomment = function(req, res){
+        var bid = req.params.id;
+        var uid = req.cookies.uid;
+        var newcomment = {
+            content: req.body.comment_content,
+            author: uid,
+            date: Date.now(),
+            parent: {
+                object: 'blog',
+                id: bid
+            }
+        };
+
+        comment.new(newcomment, function(err, comment){
+            res.json(comment);
         });
     };
 
