@@ -7,13 +7,13 @@ block content
     //- htmlText = $('<div><span id='box'>Hi, I am a span box</span></div>')
 
     .help-block(style="font-size: 11px;") Author:&nbsp
-      a(href="/user/#{author.name}") #{author.name}
+      a(href="/user/#{blog.author.name}") #{blog.author.name}
       | &nbsp|
       | Date: #{blog.date}
     article
       p !{text}
 
-    if (author.name == userauth.name)
+    if (blog.author.name == userauth.name)
       p
         .btn-group
           a.help-block.btn.btn-default.btn-sm(href="./#{blog._id}/delete") Delete

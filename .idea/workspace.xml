@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94a9bd73-435f-4b48-8757-30121cab926a" name="Default" comment="">
+    <list default="true" id="94a9bd73-435f-4b48-8757-30121cab926a" name="Default" comment="+ comment authors avatar thumbnailed">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/api.js" afterPath="$PROJECT_DIR$/lib/api.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/blog.js" afterPath="$PROJECT_DIR$/routes/blog.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/blog/view.jade" afterPath="$PROJECT_DIR$/views/blog/view.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="testset.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1379069367249" ignored="false" />
+    <file path="/Dummy.txt" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1379070364396" ignored="false" />
     <file path="/README.md" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378546909735" ignored="false" />
     <file path="$PROJECT_DIR$/../git.proj01/README" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378540679238" ignored="false" />
     <file path="/README" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378540679238" ignored="false" />
     <file path="$PROJECT_DIR$/../git.proj01/index.html" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378540863765" ignored="false" />
-    <file path="/api.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1379067828104" ignored="false" />
+    <file path="/api.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1379070099448" ignored="false" />
     <file path="/app.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1379058003417" ignored="false" />
     <file path="/new.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378976808314" ignored="false" />
     <file path="/index.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378835700401" ignored="false" />
@@ -23,8 +25,8 @@
     <file path="/a.dummy" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378974562879" ignored="false" />
     <file path="/password.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378741767724" ignored="false" />
     <file path="/layout.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378842049412" ignored="false" />
-    <file path="/blog.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1379067693042" ignored="false" />
-    <file path="/view.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1379069486093" ignored="false" />
+    <file path="/blog.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1379070309847" ignored="false" />
+    <file path="/view.jade" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1379070268693" ignored="false" />
     <file path="/config.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378913040643" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../nodeJS/Examples/[archives]/mean-demo-blog-master/mean-demo-blog-master/app.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378973960420" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../nodeJS/Examples/[archives]/mean-demo-blog-master/mean-demo-blog-master/lib/post.js" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378973928796" ignored="false" />
@@ -58,10 +60,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="blog.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="blog.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/blog.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="35" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0">
+            <state line="18" column="0" selection-start="531" selection-end="531" vertical-scroll-proportion="0.35695538">
               <folding />
             </state>
           </provider>
@@ -79,16 +81,16 @@
       <file leaf-file-name="api.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="188" column="30" selection-start="5385" selection-end="5385" vertical-scroll-proportion="0.0">
+            <state line="176" column="34" selection-start="5180" selection-end="5180" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.jade" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="view.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/blog/view.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="40" selection-start="774" selection-end="774" vertical-scroll-proportion="0.6467391">
+            <state line="9" column="49" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -162,10 +164,10 @@
         <option value="$PROJECT_DIR$/views/layout.jade" />
         <option value="$PROJECT_DIR$/views/blog/new.jade" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/lib/api.js" />
         <option value="$PROJECT_DIR$/routes/comment.js" />
-        <option value="$PROJECT_DIR$/routes/blog.js" />
+        <option value="$PROJECT_DIR$/lib/api.js" />
         <option value="$PROJECT_DIR$/views/blog/view.jade" />
+        <option value="$PROJECT_DIR$/routes/blog.js" />
       </list>
     </option>
   </component>
@@ -677,7 +679,11 @@
       <created>1379069375879</created>
       <updated>1379069375879</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="+ comment authors avatar thumbnailed">
+      <created>1379069664033</created>
+      <updated>1379069664033</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -767,7 +773,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ some console logger removed.&#10;+ blog comment design changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ comment authors avatar thumbnailed" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -781,7 +787,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="+ blog list added for blog index page" />
     <MESSAGE value="+ blog view page added&#10;+ design change on blog lists on blog index page &#10;+ added defining user logged in or not on blog index and blog view page &#10;+ added getBlog api function" />
     <MESSAGE value="+ user menu dropdowned on navbar" />
     <MESSAGE value="+ bug with menu links of blog pages solved&#10;+ bug with user dropdown on blog pages solved&#10; + added general current user object for jade templates" />
@@ -806,6 +811,7 @@
     <MESSAGE value="+ little changes fir blog comment view &#10;+ next todo removed" />
     <MESSAGE value="+ author data populated to Comments schema&#10;+ comment author data reached from blog comments&#10;+ author name added to blog comments view" />
     <MESSAGE value="+ some console logger removed.&#10;+ blog comment design changed" />
+    <MESSAGE value="+ comment authors avatar thumbnailed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -885,9 +891,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/api.js">
+    <entry file="file://$PROJECT_DIR$/views/blog/view.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="188" column="30" selection-start="5385" selection-end="5385" vertical-scroll-proportion="0.0">
+        <state line="9" column="49" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -899,16 +905,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/blog.js">
+    <entry file="file://$PROJECT_DIR$/lib/api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="35" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0">
+        <state line="176" column="34" selection-start="5180" selection-end="5180" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/blog/view.jade">
+    <entry file="file://$PROJECT_DIR$/routes/blog.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="40" selection-start="774" selection-end="774" vertical-scroll-proportion="0.6467391">
+        <state line="18" column="0" selection-start="531" selection-end="531" vertical-scroll-proportion="0.35695538">
           <folding />
         </state>
       </provider>

@@ -15,14 +15,10 @@
         var c = {parent: {object: 'blog', id: bid}};
         api.getBlog(bid, function(err, blog){
             var uid = req.cookies.uid;
-            api.getUserById(blog.author, function(err, author){
-                res.header('X-XSS-Protection', 0);
-
-                api.getComments(c, function(err, comments){
-                    if(err) throw err;
-                    res.render('./blog/view', {title: blog.title, blog: blog, author: author, comments: comments});
-                });
-
+            res.header('X-XSS-Protection', 0);
+            api.getComments(c, function(err, comments){
+                if(err) throw err;
+                res.render('./blog/view', {title: blog.title, blog: blog, comments: comments});
             });
         });
     };
