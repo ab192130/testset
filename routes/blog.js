@@ -3,8 +3,6 @@
      * Blogs
      */
 
-    //@TODO: send html tags with textarea when post a new blog
-
     exports.index = function(req, res){
         api.getBlogs(function(err, blogs){
             res.render('./blog/index', {title: 'Blogs', blogs: blogs});
@@ -104,7 +102,7 @@
         };
 
         comment.new(newcomment, function(err, comment){
-            res.json(comment);
+            res.redirect('/blog/' + bid);
         });
     };
 

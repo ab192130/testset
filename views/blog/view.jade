@@ -21,9 +21,9 @@ block content
     if comments
       pre
         each comment in comments
-            p= comment.author + ' - ' + comment.content
+            p= comment.author + ': ' + comment.content
 
     form(method="post")
-        textarea.form-control(rows=5, name="comment_content", placeholder="What do you think about it?")
+        textarea.form-control(rows=2, name="comment_content", placeholder="What do you think about it?")
         pre
           input.btn.btn-primary(type="submit", value="Add comment")
