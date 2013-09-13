@@ -7,8 +7,8 @@
     </list>
     <ignored path="testset.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1379079323022" ignored="false" />
-    <file path="/README.md" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1379079494661" ignored="false" />
+    <file path="/Dummy.txt" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1379079514679" ignored="false" />
+    <file path="/README.md" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1379080019502" ignored="false" />
     <file path="$PROJECT_DIR$/../git.proj01/README" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378540679238" ignored="false" />
     <file path="/README" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378540679238" ignored="false" />
     <file path="$PROJECT_DIR$/../git.proj01/index.html" changelist="94a9bd73-435f-4b48-8757-30121cab926a" time="1378540863765" ignored="false" />
@@ -97,7 +97,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="9" selection-start="95" selection-end="95" vertical-scroll-proportion="0.26771653">
+            <state line="12" column="36" selection-start="324" selection-end="324" vertical-scroll-proportion="0.5543478">
               <folding />
             </state>
           </provider>
@@ -712,7 +712,11 @@
       <created>1379079326800</created>
       <updated>1379079326801</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="+ readme.md changes">
+      <created>1379079515975</created>
+      <updated>1379079515975</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -802,7 +806,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ blog comments view changed&#10;+ some testing changes on readme.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ readme.md changes" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -816,7 +820,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="+ bug with menu links of blog pages solved&#10;+ bug with user dropdown on blog pages solved&#10; + added general current user object for jade templates" />
     <MESSAGE value="+ forgot to remove todos ))" />
     <MESSAGE value="+ bug with menu on new post page fixed&#10;+ new bug - Can't set headers after they are sent." />
     <MESSAGE value="+ bug - Can't set headers after they are sent. FIXED" />
@@ -841,6 +844,7 @@
     <MESSAGE value="+ comment authors avatar thumbnailed" />
     <MESSAGE value="+ blog author data is populated" />
     <MESSAGE value="+ blog comments view changed&#10;+ some testing changes on readme.md" />
+    <MESSAGE value="+ readme.md changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -945,7 +949,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="9" selection-start="95" selection-end="95" vertical-scroll-proportion="0.26771653">
+        <state line="12" column="36" selection-start="324" selection-end="324" vertical-scroll-proportion="0.5543478">
           <folding />
         </state>
       </provider>
